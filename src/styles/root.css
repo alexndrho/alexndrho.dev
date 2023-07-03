@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #228be6;
+  --color-secondary: #868e96;
+  --color-success: #40c057;
+  --color-danger: #fa5252;
+
+  --color-primary-dark: #1c7ed6;
+
+  --color-black: #231f20;
+  --color-white: #ffffff;
+  --color-dark-white: #f2f2f2;
+
+  /* for container spacing */
+  --size-max-width: 1366px;
+  --size-max-width-sm: 1140px;
+  --size-padding: 2rem;
+
+  /* toastify */
+  --toastify-color-success: var(--color-success) !important;
+  --toastify-color-info: var(--color-primary) !important;
+  --toastify-color-error: var(--color-danger) !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  font-family: 'Poppins', 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--color-black);
+}
+
+html {
+  scroll-behavior: smooth;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

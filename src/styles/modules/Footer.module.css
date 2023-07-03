@@ -1,0 +1,29 @@
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.footer .container {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer h6 {
+  margin: 0 0 0.25em 0;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.footer .link {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: var(--color-secondary);
+  text-decoration: none;
+}

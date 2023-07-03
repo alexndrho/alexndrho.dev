@@ -1,0 +1,13 @@
+.icon-link {
+  height: 2rem;
+  fill: var(--color-black);
+
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .icon-link:hover {
+    fill: var(--color-primary);
+  }
+}

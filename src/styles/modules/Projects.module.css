@@ -1,0 +1,9 @@
+.projects h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.projects h2 span {
+  font-size: inherit;
+  color: var(--color-black);
+}

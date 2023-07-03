@@ -1,0 +1,9 @@
+.link {
+  color: var(--color-black);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: var(--color-primary);
+  }
+}
