@@ -1,4 +1,3 @@
-import Nav from '@components/Nav';
 import styles from '@styles/modules/Home.module.css';
 import me from '@assets/me.webp';
 import { ReactComponent as GithubIcon } from '@assets/icons/github.svg';
@@ -7,8 +6,6 @@ import { ReactComponent as LinkedinIcon } from '@assets/icons/linkedin.svg';
 const Home = () => {
   return (
     <section id="home" className={styles.hero}>
-      <Nav />
-
       <div className={'section-container ' + styles['section-container']}>
         <div className={styles.info}>
           <h1>

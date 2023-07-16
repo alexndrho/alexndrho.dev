@@ -1,6 +1,7 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Nav from './components/Nav';
 import Home from '@/components/Home';
 import About from '@components/About';
 import Projects from '@components/Projects';
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <>
       <ToastContainer />
+      <Nav />
 
       <main>
         <Home />
