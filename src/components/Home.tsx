@@ -1,12 +1,12 @@
 import Nav from '@components/Nav';
-import styles from '@styles/modules/Header.module.css';
+import styles from '@styles/modules/Home.module.css';
 import me from '@assets/me.webp';
 import { ReactComponent as GithubIcon } from '@assets/icons/github.svg';
 import { ReactComponent as LinkedinIcon } from '@assets/icons/linkedin.svg';
 
-const Header = () => {
+const Home = () => {
   return (
-    <header id="home" className={styles.header}>
+    <section id="home">
       <Nav />
 
       <section className={styles.hero}>
@@ -47,8 +47,8 @@ const Header = () => {
           </div>
         </div>
       </section>
-    </header>
+    </section>
   );
 };
 
-export default Header;
+export default Home;
