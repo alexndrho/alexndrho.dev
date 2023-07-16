@@ -13,9 +13,8 @@ const App = () => {
     <>
       <ToastContainer />
 
-      <Home />
-
       <main>
+        <Home />
         <About />
         <Projects />
         <Contact />
