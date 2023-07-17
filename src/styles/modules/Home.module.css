@@ -2,7 +2,7 @@
   height: 100vh;
 }
 
-.hero .section-container {
+.hero__container {
   height: 100%;
 
   display: flex;
@@ -12,47 +12,46 @@
 }
 
 /* info */
-.hero .info {
+.hero__info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.info,
-.info span {
+.hero__info,
+.hero__span {
   font-size: 1rem;
   font-weight: 600;
 }
 
-.info h1 span {
+.hero__span--title {
   margin-bottom: 0.25em;
   display: block;
 }
 
-.info h1 {
+.hero__span--highlight {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.hero__title {
   margin: 0 0 0.125em 0;
   font-size: 3.5rem;
   font-weight: 700;
 }
 
-.info .description {
+.hero__description {
   margin: 0 0 1em 0;
-  color: var(--color-black);
   line-height: 1.5em;
 }
 
-.info .description span {
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
-
-.info .links {
+.hero__links {
   display: flex;
   gap: 0.5em;
 }
 
 /* hero-img */
-.hero .hero-img {
+.hero__profile-pic {
   margin-bottom: 1.25rem;
   width: 7.5rem;
   aspect-ratio: 1;
@@ -63,21 +62,21 @@
 
 /* media queries */
 @media (min-width: 800px) {
-  .hero .section-container {
+  .hero__container {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .info h1 {
-    font-size: 5rem;
-  }
-
-  .info,
-  .info span {
+  .hero__info,
+  .hero__span {
     font-size: 1.25rem;
   }
 
-  .hero .hero-img {
+  .hero__title {
+    font-size: 5rem;
+  }
+
+  .hero__profile-pic {
     margin-bottom: 0;
     width: 20rem;
   }

@@ -1,13 +1,9 @@
-.contact p {
-  margin-top: 0;
-}
-
-.contact .link {
+.contact__link {
   color: var(--color-primary);
 }
 
 /* form */
-.contact form {
+.contact__form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -15,32 +11,32 @@
   font-weight: 500;
 }
 
-.contact form textarea {
+.contact__textarea {
   resize: none;
   min-height: 10em;
 }
 
-.contact form input,
-.contact form textarea,
-.contact form button {
+.contact__input,
+.contact__textarea,
+.contact__button {
   padding: 0.75rem;
 }
 
-.contact form input,
-.contact form textarea {
+.contact__input,
+.contact__textarea {
   margin-bottom: 1em;
   width: 100%;
   border: 0.075em solid var(--color-secondary);
   border-radius: 0.25em;
 }
 
-.contact form input:focus,
-.contact form textarea:focus {
+.contact__input:focus,
+.contact__textarea:focus {
   outline: none;
   border-color: var(--color-primary);
 }
 
-.contact form button {
+.contact__button {
   border: none;
   border-radius: 0.25rem;
   background-color: var(--color-primary);
@@ -52,14 +48,14 @@
 
 /* media queries */
 @media (hover: hover) {
-  .contact form button:hover {
+  .contact__button:hover {
     background-color: var(--color-primary-dark);
   }
 }
 
 @media (min-width: 800px) {
-  .contact form input,
-  .contact form textarea {
+  .contact__input,
+  .contact__textarea {
     width: 75%;
   }
 }

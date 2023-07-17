@@ -1,12 +1,12 @@
-section:nth-child(odd) {
+main > section:nth-child(odd) {
   background-color: var(--color-dark-white);
 }
 
-section:nth-child(even) {
+main > section:nth-child(even) {
   background-color: var(--color-white);
 }
 
-section h2 {
+main > section h2 {
   margin-top: 0;
   color: var(--color-primary);
 }

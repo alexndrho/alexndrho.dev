@@ -1,9 +1,9 @@
-.projects h2 {
+.projects__title {
   margin: 0;
   text-align: center;
 }
 
-.projects h2 span {
+.projects__title__span {
   font-size: inherit;
   color: var(--color-black);
 }

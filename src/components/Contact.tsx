@@ -46,23 +46,37 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className={styles.contact}>
-      <div className="section-container">
+    <section id="contact">
+      <div className="container container--section">
         <h2>Contact</h2>
 
         <p>
           Get in touch with me directly on{' '}
-          <a href="mailto: ho.alexander.g@gmail.com" className={styles.link}>
+          <a href="mailto: ho.alexander.g@gmail.com" className={styles.contact__link}>
             ho.alexander.g@gmail.com
           </a>{' '}
           or send me a message
         </p>
 
         {/* Netlify Form */}
-        <form data-netlify="true" name="contact" action="POST" onSubmit={handleSubmit}>
+        <form
+          data-netlify="true"
+          name="contact"
+          action="POST"
+          onSubmit={handleSubmit}
+          className={styles.contact__form}
+        >
           <input type="hidden" name="form-name" value="contact" />
 
-          <input ref={nameInputRef} type="text" name="name" id="name" placeholder="Name" required />
+          <input
+            ref={nameInputRef}
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            className={styles.contact__input}
+            required
+          />
 
           <input
             ref={emailInputRef}
@@ -70,6 +84,7 @@ const Contact = () => {
             name="email"
             id="email"
             placeholder="Email"
+            className={styles.contact__input}
             required
           />
 
@@ -78,10 +93,13 @@ const Contact = () => {
             name="message"
             id="message"
             placeholder="Message"
+            className={styles.contact__textarea}
             required
           />
 
-          <button type="submit">Send Message</button>
+          <button type="submit" className={styles.contact__button}>
+            Send Message
+          </button>
         </form>
       </div>
     </section>

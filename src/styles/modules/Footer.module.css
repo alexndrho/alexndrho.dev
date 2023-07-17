@@ -3,27 +3,29 @@
   color: var(--color-white);
 }
 
-.footer .container {
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
+.footer__container {
   display: flex;
   justify-content: space-between;
 }
 
-.footer .links {
+.footer__section {
   display: flex;
   flex-direction: column;
 }
 
-.footer h6 {
+.footer__h6 {
   margin: 0 0 0.25em 0;
   font-size: 1em;
   font-weight: 600;
 }
 
-.footer .link {
+.footer__link {
   font-size: 0.9em;
   font-weight: 400;
   color: var(--color-secondary);
   text-decoration: none;
+}
+
+.footer__link:hover {
+  color: var(--color-primary);
 }

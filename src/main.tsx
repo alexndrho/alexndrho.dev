@@ -4,7 +4,6 @@ import App from '@/App';
 import 'normalize.css';
 import '@styles/root.css';
 import '@styles/container.css';
-import '@styles/icon-link.css';
 import '@styles/link.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

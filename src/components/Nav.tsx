@@ -19,24 +19,28 @@ const Nav = () => {
 
   return (
     <nav className={styles.nav}>
-      <div className={styles.container}>
-        <a href="#home" className={`${styles.logo} ${styles.link} link`}>
+      <div className={`${styles.nav__container} container container--nav`}>
+        <a href="#home" className={`${styles.nav__logo} ${styles.nav__link} link--dark`}>
           alexndrho
         </a>
 
-        <div className={styles['main-menu'] + ' ' + (isMenuOpen ? styles['show-main-menu'] : '')}>
-          <a href="#about" className={styles.link + ' link'} onClick={toggleMenu}>
+        <div
+          className={
+            styles['nav__main-menu'] + ' ' + (isMenuOpen ? styles['nav__main-menu--show'] : '')
+          }
+        >
+          <a href="#about" className={styles.nav__link + ' link--dark'} onClick={toggleMenu}>
             About
           </a>
-          <a href="#projects" className={styles.link + ' link'} onClick={toggleMenu}>
+          <a href="#projects" className={styles.nav__link + ' link--dark'} onClick={toggleMenu}>
             Projects
           </a>
-          <a href="#contact" className={styles.link + ' link'} onClick={toggleMenu}>
+          <a href="#contact" className={styles.nav__link + ' link--dark'} onClick={toggleMenu}>
             Contact
           </a>
         </div>
 
-        <BarsIcon className={styles['ham-menu']} onClick={toggleMenu} />
+        <BarsIcon className={styles['nav__ham-menu']} onClick={toggleMenu} />
       </div>
     </nav>
   );
