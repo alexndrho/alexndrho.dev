@@ -17,6 +17,12 @@
   --size-max-width-sm: 1140px;
   --size-padding: 1.5rem;
 
+  /* for border radius */
+  --border-radius: 0.75rem;
+
+  /* box shadow */
+  --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
   /* toastify */
   --toastify-color-success: var(--color-success) !important;
   --toastify-color-info: var(--color-primary) !important;
