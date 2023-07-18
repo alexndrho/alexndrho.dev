@@ -7,7 +7,7 @@ const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    const mobileQuery = window.matchMedia('(max-width: 799px)');
+    const mobileQuery = window.matchMedia('(max-width: 800px)');
     if (!mobileQuery.matches) return;
 
     if (isMenuOpen) {
