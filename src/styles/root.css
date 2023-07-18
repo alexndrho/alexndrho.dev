@@ -15,7 +15,7 @@
   /* for container spacing */
   --size-max-width: 1366px;
   --size-max-width-sm: 1140px;
-  --size-padding: 2rem;
+  --size-padding: 1.5rem;
 
   /* toastify */
   --toastify-color-success: var(--color-success) !important;
