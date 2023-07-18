@@ -1,7 +1,7 @@
 import styles from '@styles/modules/Home.module.css';
 import me from '@assets/me.webp';
-import { ReactComponent as GithubIcon } from '@assets/icons/github.svg';
-import { ReactComponent as LinkedinIcon } from '@assets/icons/linkedin.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
   return (
@@ -29,8 +29,9 @@ const Home = () => {
               aria-label="Github"
               target="_blank"
               rel="noreferrer"
+              className="link--icon"
             >
-              <GithubIcon className="link--icon" />
+              <FontAwesomeIcon icon={faGithub} />
             </a>
 
             <a
@@ -38,8 +39,9 @@ const Home = () => {
               aria-label="LinkedIn"
               target="_blank"
               rel="noreferrer"
+              className="link--icon"
             >
-              <LinkedinIcon className="link--icon" />
+              <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>
         </div>

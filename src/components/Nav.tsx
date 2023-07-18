@@ -1,6 +1,7 @@
-import { useState } from 'react';
 import styles from '@styles/modules/Nav.module.css';
-import { ReactComponent as BarsIcon } from '@assets/icons/bars.svg';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +41,11 @@ const Nav = () => {
           </a>
         </div>
 
-        <BarsIcon className={styles['nav__ham-menu']} onClick={toggleMenu} />
+        <FontAwesomeIcon
+          icon={faBarsStaggered}
+          className={styles['nav__ham-menu']}
+          onClick={toggleMenu}
+        />
       </div>
     </nav>
   );
