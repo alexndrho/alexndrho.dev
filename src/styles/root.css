@@ -13,12 +13,14 @@
   --color-dark-white: #f2f2f2;
 
   /* for container spacing */
-  --size-max-width: 1366px;
-  --size-max-width-sm: 1140px;
+  --size-max-width-lg: 1366px;
+  --size-max-width-md: 1140px;
   --size-padding: 1.5rem;
 
   /* for border radius */
-  --border-radius: 0.75rem;
+  --border-radius-md: 0.75rem;
+  --border-radius-sm: 0.5rem;
+  --border-radius-xs: 0.25rem;
 
   /* box shadow */
   --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);

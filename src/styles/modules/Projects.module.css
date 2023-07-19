@@ -8,7 +8,7 @@
   background-color: var(--color-white);
   padding: var(--size-padding);
   box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-md);
 
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   width: 100%;
 
   box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-md);
 }
 
 .card__info {
@@ -43,7 +43,7 @@
   height: 0.15em;
   width: 10rem;
   background-color: var(--color-primary);
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-md);
 }
 
 .card .card__desc {
@@ -62,7 +62,7 @@
 
 .card__tech-stack {
   padding: 0.25em 0.5em;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-xs);
   background-color: var(--color-secondary);
   color: var(--color-white);
   font-size: 0.75rem;
@@ -80,7 +80,7 @@
   transform: 0;
 
   padding: 0.5em 1em;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-xs);
   background-color: var(--color-primary);
   color: var(--color-white);
 

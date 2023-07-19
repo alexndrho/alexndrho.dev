@@ -3,7 +3,7 @@
   margin-right: auto;
   padding: 0 var(--size-padding) 0 var(--size-padding);
 
-  max-width: calc(var(--size-max-width-sm) + (var(--size-padding) * 2));
+  max-width: calc(var(--size-max-width-md) + (var(--size-padding) * 2));
 }
 
 .container--nav {
@@ -11,7 +11,7 @@
   height: 4em;
   width: 100%;
   padding: 0 var(--size-padding);
-  max-width: calc(var(--size-max-width) + (var(--size-padding) * 2));
+  max-width: calc(var(--size-max-width-lg) + (var(--size-padding) * 2));
 }
 
 .container--section {
