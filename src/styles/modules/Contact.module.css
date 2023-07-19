@@ -27,7 +27,7 @@
   margin-bottom: 1em;
   width: 100%;
   border: 0.075em solid var(--color-secondary);
-  border-radius: 0.25em;
+  border-radius: var(--border-radius-xs);
 }
 
 .contact__input:focus,
@@ -38,7 +38,7 @@
 
 .contact__button {
   border: none;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-xs);
   background-color: var(--color-primary);
   color: var(--color-white);
   cursor: pointer;
