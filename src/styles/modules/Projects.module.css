@@ -116,6 +116,7 @@
   }
 
   .card__img {
+    min-width: 0;
     flex: 4;
   }
 
