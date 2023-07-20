@@ -17,8 +17,7 @@
 }
 
 .contact__input,
-.contact__textarea,
-.contact__button {
+.contact__textarea {
   padding: 0.75rem;
 }
 
@@ -36,23 +35,7 @@
   border-color: var(--color-primary);
 }
 
-.contact__button {
-  border: none;
-  border-radius: var(--border-radius-xs);
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  cursor: pointer;
-
-  font-weight: inherit;
-}
-
 /* media queries */
-@media (hover: hover) {
-  .contact__button:hover {
-    background-color: var(--color-primary-dark);
-  }
-}
-
 @media (min-width: 800px) {
   .contact__input,
   .contact__textarea {
