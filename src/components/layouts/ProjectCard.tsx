@@ -39,7 +39,12 @@ const ProjectCard = ({
 
         <div className={styles.card__links}>
           {liveLink && (
-            <a href={liveLink} target="_blank" rel="noreferrer" className={styles.card__link}>
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn--primary btn--dashed-effect"
+            >
               Live
               <span className={styles.card__link__icon}>
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
@@ -52,7 +57,7 @@ const ProjectCard = ({
               href={sourceLink}
               target="_blank"
               rel="noreferrer"
-              className={`${styles.card__link}`}
+              className="btn btn--primary btn--dashed-effect"
             >
               Source
               <span className={styles.card__link__icon}>

@@ -97,7 +97,7 @@ const Contact = () => {
             required
           />
 
-          <button type="submit" className={styles.contact__button}>
+          <button type="submit" className="btn btn--primary btn--dashed-effect">
             Send Message
           </button>
         </form>

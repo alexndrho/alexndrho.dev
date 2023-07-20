@@ -70,30 +70,8 @@
   gap: 0.75em;
 }
 
-.card__link {
-  position: relative;
-  transform: 0;
-
-  padding: 0.5em 1em;
-  border-radius: var(--border-radius-xs);
-  background-color: var(--color-primary);
-  color: var(--color-white);
-
-  text-decoration: none;
-  font-weight: 500;
-
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-
-  transition: transform 0.2s ease-in-out;
-}
-
-.card__link:hover {
-  transform: translateY(-0.25em);
-}
-
 .card__link__icon {
+  margin-left: 0.5em;
   font-size: 1.125em;
 }
 
