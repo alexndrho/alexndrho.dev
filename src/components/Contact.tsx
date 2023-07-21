@@ -74,7 +74,7 @@ const Contact = () => {
             name="name"
             id="name"
             placeholder="Name"
-            className={styles.contact__input}
+            className={`${styles.contact__input} input input--primary`}
             required
           />
 
@@ -84,7 +84,7 @@ const Contact = () => {
             name="email"
             id="email"
             placeholder="Email"
-            className={styles.contact__input}
+            className={`${styles.contact__input} input input--primary`}
             required
           />
 
@@ -93,7 +93,8 @@ const Contact = () => {
             name="message"
             id="message"
             placeholder="Message"
-            className={styles.contact__textarea}
+            className={`${styles.contact__textarea} input input--primary`}
+            rows={8}
             required
           />
 
