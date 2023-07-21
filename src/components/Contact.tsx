@@ -40,8 +40,6 @@ const Contact = () => {
       } else {
         onError('Message failed to send');
       }
-
-      resetForm();
     }
   };
 
