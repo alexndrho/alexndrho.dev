@@ -16,7 +16,7 @@
 }
 
 /* media queries */
-@media (min-width: 800px) {
+@media (--lg-viewport) {
   .contact__input,
   .contact__textarea {
     width: 75%;

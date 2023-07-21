@@ -65,7 +65,7 @@
 }
 
 /* media queries */
-@media (min-width: 800px) {
+@media (--lg-viewport) {
   .nav__ham-menu {
     display: none;
   }

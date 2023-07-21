@@ -75,7 +75,7 @@
   font-size: 1.125em;
 }
 
-@media (min-width: 800px) {
+@media (--lg-viewport) {
   .card {
     align-items: center;
   }
