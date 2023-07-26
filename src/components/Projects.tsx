@@ -1,8 +1,8 @@
 import ProjectCard from './layouts/ProjectCard';
 import styles from '@styles/modules/Projects.module.css';
 import brainiacPreview from '@assets/previews/brainiac.webp';
-import blogPostPreview from '@assets/previews/blog-post.png';
-import stickyThoughtsPreview from '@assets/previews/sticky-thoughts.png';
+import blogPostPreview from '@assets/previews/blog-post.webp';
+import stickyThoughtsPreview from '@assets/previews/sticky-thoughts.webp';
 
 const Projects = () => {
   return (
