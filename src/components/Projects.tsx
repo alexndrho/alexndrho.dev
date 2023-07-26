@@ -1,5 +1,6 @@
 import ProjectCard from './layouts/ProjectCard';
 import styles from '@styles/modules/Projects.module.css';
+import brainiacPreview from '@assets/previews/brainiac.webp';
 import blogPostPreview from '@assets/previews/blog-post.png';
 import stickyThoughtsPreview from '@assets/previews/sticky-thoughts.png';
 
@@ -8,6 +9,15 @@ const Projects = () => {
     <section id="projects">
       <div className={`${styles.projects__container} container container--section`}>
         <h2>Projects</h2>
+
+        <ProjectCard
+          title="Brainiac"
+          description="Test your knowledge, the trivia app that challenges your mind."
+          image={brainiacPreview}
+          techStack={['React', 'Mantine', 'API']}
+          liveLink="https://thebrainiac.netlify.app/"
+          sourceLink="https://github.com/alexndrho/brainiac"
+        />
 
         <ProjectCard
           title="Sticky Thoughts"
