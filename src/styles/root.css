@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --color-primary: #228be6;
-  --color-secondary: #868e96;
-  --color-success: #40c057;
-  --color-danger: #fa5252;
+  --color-primary: #1c7ed6;
+  --color-secondary: #6c757d;
+  --color-success: #37b24d;
+  --color-danger: #f03e3e;
 
   --color-primary-dark: #1c7ed6;
 
