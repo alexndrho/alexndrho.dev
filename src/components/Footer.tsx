@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={`container container--footer ${styles['footer__container']}`}>
         <div className={styles.footer__section}>
-          <h6 className={styles.footer__h6}>Connect</h6>
+          <h2 className={styles.footer__title}>Connect</h2>
 
           <a
             href="https://github.com/alexndrho"
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.footer__section}>
-          <h6 className={styles.footer__h6}>Get in Touch</h6>
+          <h2 className={styles.footer__title}>Get in Touch</h2>
           <a href="mailto: ho.alexander.g@gmail.com" className={`link ${styles.footer__link}`}>
             ho.alexander.g@gmail.com
           </a>
