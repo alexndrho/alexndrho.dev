@@ -6,9 +6,9 @@
   --color-success: #37b24d;
   --color-danger: #f03e3e;
 
-  --color-black: #231f20;
-  --color-white: #ffffff;
-  --color-dark-white: #f2f2f2;
+  --color-dark: #231f20;
+  --color-light: #ffffff;
+  --color-light-darker: #f2f2f2;
 
   /* for container spacing */
   --size-max-width-lg: 1366px;
@@ -40,7 +40,7 @@ body,
 #root {
   width: 100%;
   font-family: 'Poppins', 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
-  color: var(--color-black);
+  color: var(--color-dark);
 }
 
 html {

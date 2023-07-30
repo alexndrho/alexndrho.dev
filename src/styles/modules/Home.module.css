@@ -30,8 +30,8 @@
 }
 
 .hero__span--highlight {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }
 
 .hero__title {
@@ -55,7 +55,7 @@
   margin-bottom: 1.25rem;
   width: 7.5rem;
   aspect-ratio: 1;
-  border: 0.25rem solid var(--color-black);
+  border: 0.25rem solid var(--color-dark);
   border-radius: 50%;
   user-select: none;
 }

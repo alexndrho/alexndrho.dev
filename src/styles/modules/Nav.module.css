@@ -4,7 +4,7 @@
 
   width: 100%;
   font-size: 1rem;
-  background-color: white;
+  background-color: var(--color-light);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -35,7 +35,7 @@
   width: 100vw;
   height: 100vh;
 
-  background: var(--color-white);
+  background: var(--color-light);
   display: flex;
   flex-direction: column;
   justify-content: center;

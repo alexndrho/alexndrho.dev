@@ -1,5 +1,5 @@
 .link--dark {
-  color: var(--color-black);
+  color: var(--color-dark);
 }
 
 .link--dark:hover {
@@ -16,7 +16,7 @@
 
 .link--icon {
   font-size: 2rem;
-  color: var(--color-black);
+  color: var(--color-dark);
 
   transition: color 0.1s ease-in-out;
   cursor: pointer;

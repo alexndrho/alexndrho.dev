@@ -1,6 +1,6 @@
 .card {
   margin-bottom: 2rem;
-  background-color: var(--color-white);
+  background-color: var(--color-light);
   padding: var(--size-padding);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius-md);
@@ -59,7 +59,7 @@
   padding: 0.25em 0.5em;
   border-radius: var(--border-radius-xs);
   background-color: var(--color-secondary);
-  color: var(--color-white);
+  color: var(--color-light);
   font-size: 0.75rem;
   font-weight: 500;
 }
