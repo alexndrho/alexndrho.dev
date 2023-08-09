@@ -1,8 +1,5 @@
 import styles from '@styles/modules/layouts/ProjectCard.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import React from 'react';
+import { TbBrandGithub, TbExternalLink } from 'react-icons/tb';
 
 interface ProjectCardProps {
   title: React.ReactNode;
@@ -46,9 +43,7 @@ const ProjectCard = ({
               className="btn btn--primary btn--dashed-effect"
             >
               Live
-              <span className={styles.card__link__icon}>
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </span>
+              <TbExternalLink className={styles.card__link__icon} />
             </a>
           )}
 
@@ -60,9 +55,7 @@ const ProjectCard = ({
               className="btn btn--primary btn--dashed-effect"
             >
               Source
-              <span className={styles.card__link__icon}>
-                <FontAwesomeIcon icon={faGithub} />
-              </span>
+              <TbBrandGithub className={styles.card__link__icon} />
             </a>
           )}
         </div>

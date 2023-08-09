@@ -1,7 +1,6 @@
 import styles from '@styles/modules/Home.module.css';
 import me from '@assets/me.webp';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Home = () => {
   return (
@@ -31,7 +30,7 @@ const Home = () => {
               rel="noreferrer"
               className="link--icon"
             >
-              <FontAwesomeIcon icon={faGithub} />
+              <FaGithub />
             </a>
 
             <a
@@ -41,7 +40,7 @@ const Home = () => {
               rel="noreferrer"
               className="link--icon"
             >
-              <FontAwesomeIcon icon={faLinkedin} />
+              <FaLinkedin />
             </a>
           </div>
         </div>
