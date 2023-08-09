@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { toast } from 'react-toastify';
 import styles from '@styles/modules/Contact.module.css';
+import { FaRegPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
   const nameInputRef = useRef<HTMLInputElement>(null);
@@ -98,6 +99,7 @@ const Contact = () => {
 
           <button type="submit" className="btn btn--primary btn--dashed-effect">
             Send Message
+            <FaRegPaperPlane />
           </button>
         </form>
       </div>
