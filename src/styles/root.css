@@ -5,10 +5,12 @@
   --color-secondary: #6c757d;
   --color-success: #37b24d;
   --color-danger: #f03e3e;
+  --color-warning: #f59f00;
 
   --color-dark: #231f20;
   --color-light: #ffffff;
   --color-light-darker: #e6e6e6;
+  --color-light-darkest: #cccccc;
 
   /* for container spacing */
   --size-max-width-lg: 1366px;
