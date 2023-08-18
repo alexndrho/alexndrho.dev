@@ -20,7 +20,20 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <article className={styles.card}>
-      <img src={image} alt="project-preview" className={styles.card__img} />
+      <div className={styles['card__container-img']}>
+        <div className={styles['card__img-head']}>
+          <div className={styles['card__window-controls']}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div aria-label="website url" className={styles['card__url-txt']}>
+            {liveLink}
+          </div>
+        </div>
+        <img src={image} alt="project-preview" className={styles.card__img} />
+      </div>
 
       <div className={styles.card__info}>
         <h3 className={styles.card__title}>{title}</h3>
