@@ -1,0 +1,89 @@
+.nav {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  font-size: 1rem;
+  background-color: var(--color-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 98;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  font-size: 1.15em !important;
+  font-weight: 700 !important;
+  user-select: none;
+}
+
+.nav__main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+
+  transition: transform 0.2s ease-out;
+}
+
+/* .show-nav is added to nav .main-menu when the menu is open in mobile view */
+.nav__main-menu--show {
+  transform: translateX(0);
+}
+
+.nav__link {
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: 600;
+
+  transition: color 0.2s ease-out;
+}
+
+.nav__ham-menu {
+  height: 1.4em;
+  cursor: pointer;
+  z-index: 99;
+  font-size: 1.25em;
+}
+
+/* media queries */
+@media (--lg-viewport) {
+  .nav__ham-menu {
+    display: none;
+  }
+
+  .nav__main-menu {
+    position: static;
+    transform: translate3d(0, 0, 0);
+    width: auto;
+    height: auto;
+    background: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .nav__link {
+    font-size: 1em;
+  }
+}
