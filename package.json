@@ -11,5 +11,9 @@
   },
   "dependencies": {
     "astro": "^2.10.14"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "cssnano": "^6.0.1"
   }
 }
