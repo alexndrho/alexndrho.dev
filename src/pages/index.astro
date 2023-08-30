@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
+import Home from '../components/sections/Home.astro';
 
 import 'normalize.css';
 import '../styles/global.css';
@@ -15,4 +16,7 @@ import '../styles/common/container.css';
   description="I'm Alexander Gabriel Ho. Check out my portfolio to learn more about me and my interests."
 >
   <Navbar />
+  <main>
+    <Home />
+  </main>
 </Layout>
