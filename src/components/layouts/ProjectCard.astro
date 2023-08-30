@@ -1,0 +1,76 @@
+---
+import { TbBrandGithub, TbExternalLink } from 'react-icons/tb';
+import styles from '../../styles/layout/ProjectCard.module.css';
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  techStack: string[];
+  liveLink?: string;
+  sourceLink?: string;
+}
+
+const { title, description, image, techStack, liveLink, sourceLink } =
+  Astro.props;
+---
+
+<article class={styles.card}>
+  <div class={styles['card__container-img']}>
+    <div class={styles['card__img-head']}>
+      <div class={styles['card__window-controls']}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div aria-label="website url" class={styles['card__url-txt']}>
+        {liveLink}
+      </div>
+    </div>
+    <img src={image} alt="project-preview" class={styles.card__img} />
+  </div>
+
+  <div class={styles.card__info}>
+    <h3 class={styles.card__title}>{title}</h3>
+    <p class={styles.card__desc}>{description}</p>
+
+    <div class={styles['card__tech-stacks']}>
+      {
+        techStack.map((tech) => (
+          <span class={styles['card__tech-stack']}>{tech}</span>
+        ))
+      }
+    </div>
+
+    <div class={styles.card__links}>
+      {
+        liveLink && (
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noreferrer"
+            class="btn btn--primary btn--dashed-effect"
+          >
+            Live
+            <TbExternalLink className={styles.card__link__icon} />
+          </a>
+        )
+      }
+
+      {
+        sourceLink && (
+          <a
+            href={sourceLink}
+            target="_blank"
+            rel="noreferrer"
+            class="btn btn--primary btn--dashed-effect"
+          >
+            Source
+            <TbBrandGithub className={styles.card__link__icon} />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</article>
