@@ -1,0 +1,57 @@
+---
+import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import styles from '../../styles/sections/Home.module.css';
+import me from '../../assets/me.webp';
+---
+
+<section id="home" class={styles.hero}>
+  <div class={`container container--section ${styles['hero__container']} `}>
+    <div class={styles.hero__info}>
+      <h1 class={styles.hero__title}>
+        <span class={`${styles.hero__span} ${styles['hero__span--title']}`}>
+          Hi, my name is
+        </span>
+        Alexander Ho.
+      </h1>
+
+      <p class={styles.hero__description}>
+        I&apos;m a
+        <span class={`${styles.hero__span} ${styles['hero__span--highlight']}`}>
+          Full Stack Web Developer
+        </span>
+        based in Manila, Philippines. 📍
+      </p>
+
+      <div class={styles.hero__links}>
+        <a
+          href="https://github.com/alexndrho"
+          aria-label="Github"
+          target="_blank"
+          rel="noreferrer"
+          class="link--icon"
+        >
+          <FaGithub />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/alexander-gabriel-ho/"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noreferrer"
+          class="link--icon"
+        >
+          <FaLinkedin />
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <img
+        src={me}
+        alt="Alexander Ho"
+        draggable={false}
+        class={styles['hero__profile-pic']}
+      />
+    </div>
+  </div>
+</section>
