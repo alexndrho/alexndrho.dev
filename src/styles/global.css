@@ -44,3 +44,16 @@ html {
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+main > section:nth-child(odd) {
+  background-color: var(--color-light-darker);
+}
+
+main > section:nth-child(even) {
+  background-color: var(--color-light);
+}
+
+main > section h2 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
