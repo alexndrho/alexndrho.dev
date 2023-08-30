@@ -19,7 +19,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@csstools/postcss-global-data": "^2.1.0",
     "autoprefixer": "^10.4.15",
-    "cssnano": "^6.0.1"
+    "cssnano": "^6.0.1",
+    "postcss-custom-media": "^10.0.0"
   }
 }
