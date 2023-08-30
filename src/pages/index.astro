@@ -1,9 +1,13 @@
 ---
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Home from '../components/sections/Home.astro';
 import About from '../components/sections/About.astro';
 import Projects from '../components/sections/Projects.astro';
+import Contact from '../components/sections/Contact.astro';
 
 import 'normalize.css';
 import '../styles/global.css';
@@ -17,10 +21,13 @@ import '../styles/common/container.css';
   title="alexndrho"
   description="I'm Alexander Gabriel Ho. Check out my portfolio to learn more about me and my interests."
 >
+  <ToastContainer client:idle />
+
   <Navbar />
   <main>
     <Home />
     <About />
     <Projects />
+    <Contact />
   </main>
 </Layout>

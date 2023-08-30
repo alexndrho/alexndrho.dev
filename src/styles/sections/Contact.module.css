@@ -1,0 +1,24 @@
+.contact__link {
+  color: var(--color-primary);
+}
+
+/* form */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact__input,
+.contact__textarea {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+/* media queries */
+@media (--lg-viewport) {
+  .contact__input,
+  .contact__textarea {
+    width: 75%;
+  }
+}
