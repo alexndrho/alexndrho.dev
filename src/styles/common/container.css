@@ -1,0 +1,25 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--size-padding) 0 var(--size-padding);
+
+  max-width: calc(var(--size-max-width-md) + (var(--size-padding) * 2));
+}
+
+.container--nav {
+  margin: 0 auto;
+  height: 4em;
+  width: 100%;
+  padding: 0 var(--size-padding);
+  max-width: calc(var(--size-max-width-lg) + (var(--size-padding) * 2));
+}
+
+.container--section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.container--footer {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
