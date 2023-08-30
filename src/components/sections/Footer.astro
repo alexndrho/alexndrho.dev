@@ -1,0 +1,41 @@
+---
+import styles from '../../styles/sections/Footer.module.css';
+---
+
+<footer class={styles.footer}>
+  <div class={`container container--footer ${styles['footer__container']}`}>
+    <div class={styles.footer__section}>
+      <h2 class={styles.footer__title}>Connect</h2>
+
+      <a
+        href="https://github.com/alexndrho"
+        aria-label="Github"
+        class={`link ${styles.footer__link}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Github
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/alexander-gabriel-ho/"
+        aria-label="LinkedIn"
+        class={`link ${styles.footer__link}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        LinkedIn
+      </a>
+    </div>
+
+    <div class={styles.footer__section}>
+      <h2 class={styles.footer__title}>Get in Touch</h2>
+      <a
+        href="mailto: ho.alexander.g@gmail.com"
+        class={`link ${styles.footer__link}`}
+      >
+        ho.alexander.g@gmail.com
+      </a>
+    </div>
+  </div>
+</footer>
