@@ -1,11 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import { TbBrandGithub, TbExternalLink } from 'react-icons/tb';
 import styles from '../../styles/layout/ProjectCard.module.css';
 
 interface Props {
   title: string;
   description: string;
-  image: string;
+  image: ImageMetadata;
   techStack: string[];
   liveLink?: string;
   sourceLink?: string;
@@ -28,7 +29,7 @@ const { title, description, image, techStack, liveLink, sourceLink } =
         {liveLink}
       </div>
     </div>
-    <img src={image} alt="project-preview" class={styles.card__img} />
+    <Image src={image} alt="project-preview" class={styles.card__img} />
   </div>
 
   <div class={styles.card__info}>
