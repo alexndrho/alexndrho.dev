@@ -55,7 +55,7 @@
 .hero__profile-pic {
   margin-bottom: 1.25rem;
   width: 7.5rem;
-  aspect-ratio: 1;
+  height: 7.5rem;
   border: 0.25rem solid var(--color-dark);
   border-radius: 50%;
   user-select: none;
@@ -80,5 +80,6 @@
   .hero__profile-pic {
     margin-bottom: 0;
     width: 20rem;
+    height: 20rem;
   }
 }
