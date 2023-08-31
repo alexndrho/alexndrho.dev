@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import styles from '../../styles/sections/Home.module.css';
 import me from '../../assets/me.webp';
@@ -46,8 +47,8 @@ import me from '../../assets/me.webp';
     </div>
 
     <div>
-      <img
-        src={me.src}
+      <Image
+        src={me}
         alt="Alexander Ho"
         draggable={false}
         class={styles['hero__profile-pic']}
