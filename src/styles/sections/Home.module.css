@@ -78,7 +78,7 @@
   }
 
   .hero__profile-pic {
-    margin-bottom: 0;
+    margin: 0 0 0 1.25rem;
     width: 20rem;
     height: 20rem;
   }
