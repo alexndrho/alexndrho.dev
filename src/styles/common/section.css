@@ -1,0 +1,12 @@
+.section:nth-child(odd) {
+  background-color: var(--color-light-darker);
+}
+
+.section:nth-child(even) {
+  background-color: var(--color-light);
+}
+
+.section h2 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
