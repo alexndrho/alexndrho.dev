@@ -15,7 +15,7 @@
 }
 
 .link--icon {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-4xl);
   color: var(--color-dark);
 
   transition: color 0.1s ease-in-out;
