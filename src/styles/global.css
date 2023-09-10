@@ -10,6 +10,36 @@
   --color-light-darker: #e6e6e6;
   --color-light-darkest: #cccccc;
 
+  /* for font size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  --font-size-7xl: 4.5rem;
+  --font-size-8xl: 6rem;
+  --font-size-9xl: 8rem;
+
+  /* for line height */
+  --line-height-xs: 1rem;
+  --line-height-sm: 1.25rem;
+  --line-height-md: 1.5rem;
+  --line-height-lg: 1.75rem;
+  --line-height-xl: 1.75rem;
+  --line-height-2xl: 2rem;
+  --line-height-3xl: 2.25rem;
+  --line-height-4xl: 2.5rem;
+  --line-height-5xl: 1;
+  --line-height-6xl: 1;
+  --line-height-7xl: 1;
+  --line-height-8xl: 1;
+  --line-height-9xl: 1;
+
   /* for container spacing */
   --size-max-width-lg: 1366px;
   --size-max-width-md: 1140px;

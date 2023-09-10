@@ -21,7 +21,7 @@
 
 .hero__info,
 .hero__span {
-  font-size: 1rem;
+  font-size: var(--font-size-xl);
   font-weight: 600;
 }
 
@@ -37,7 +37,7 @@
 
 .hero__title {
   margin: 0 0 0.125em 0;
-  font-size: 3.5rem;
+  font-size: var(--font-size-6xl);
   font-weight: 700;
 }
 
@@ -70,11 +70,11 @@
 
   .hero__info,
   .hero__span {
-    font-size: 1.25rem;
+    font-size: var(--font-size-2xl);
   }
 
   .hero__title {
-    font-size: 5rem;
+    font-size: var(--font-size-7xl);
   }
 
   .hero__profile-pic {

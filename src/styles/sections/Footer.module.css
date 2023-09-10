@@ -15,12 +15,13 @@
 
 .footer__title {
   margin: 0 0 0.25em 0;
-  font-size: 1em;
+  font-size: var(--font-size-lg);
   font-weight: 600;
 }
 
 .footer__link {
-  font-size: 0.9em;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
   font-weight: 400;
   color: var(--color-secondary);
   text-decoration: none;
