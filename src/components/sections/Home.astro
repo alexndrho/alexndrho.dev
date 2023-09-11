@@ -1,26 +1,26 @@
 ---
-import { Image } from 'astro:assets';
-import { FaGithub, FaLinkedin, FaAt } from 'react-icons/fa6';
-import styles from '@styles/sections/Home.module.css';
-import me from '@assets/me.webp';
+import { Image } from "astro:assets";
+import { FaGithub, FaLinkedin, FaAt } from "react-icons/fa6";
+import styles from "@styles/sections/Home.module.css";
+import me from "@assets/me.webp";
 ---
 
 <section id="home" class={`section ${styles.hero}`}>
-  <div class={`container container--section ${styles['hero__container']} `}>
+  <div class={`container container--section ${styles["hero__container"]} `}>
     <div class={styles.hero__info}>
       <h1 class={styles.hero__title}>
-        <span class={`${styles.hero__span} ${styles['hero__span--title']}`}>
+        <span class={`${styles.hero__span} ${styles["hero__span--title"]}`}>
           Hi, my name is
         </span>
-        Alexander Gabriel Ho.
+         Alexander Gabriel Ho.
       </h1>
 
       <p class={styles.hero__description}>
         I&apos;m a
-        <span class={`${styles.hero__span} ${styles['hero__span--highlight']}`}>
+        <span class={`${styles.hero__span} ${styles["hero__span--highlight"]}`}>
           Full Stack Web Developer
         </span>
-        based in Manila, Philippines. 📍
+         based in Manila, Philippines. 📍
       </p>
 
       <div class={styles.hero__links}>
@@ -44,7 +44,11 @@ import me from '@assets/me.webp';
           <FaLinkedin />
         </a>
 
-        <a href="mailto: ho.alexander.g@gmail.com" aria-label="email" class="link--icon">
+        <a
+          href="mailto: ho.alexander.g@gmail.com"
+          aria-label="email"
+          class="link--icon"
+        >
           <FaAt />
         </a>
       </div>
@@ -55,8 +59,8 @@ import me from '@assets/me.webp';
         src={me}
         alt="Alexander Ho"
         draggable={false}
-        class={styles['hero__profile-pic']}
-        loading='eager'
+        class={styles["hero__profile-pic"]}
+        loading="eager"
       />
     </div>
   </div>

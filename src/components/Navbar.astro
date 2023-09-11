@@ -1,6 +1,6 @@
 ---
-import styles from '@styles/layout/Navbar.module.css';
-import { FaBarsStaggered } from 'react-icons/fa6';
+import styles from "@styles/layout/Navbar.module.css";
+import { FaBarsStaggered } from "react-icons/fa6";
 ---
 
 <nav class={styles.nav}>
@@ -12,24 +12,24 @@ import { FaBarsStaggered } from 'react-icons/fa6';
       alexndrho
     </a>
 
-    <div class={styles['nav__main-menu']} data-main-menu>
+    <div class={styles["nav__main-menu"]} data-main-menu>
       <a
         href="/#about"
-        class={styles.nav__link + ' link--dark'}
+        class={styles.nav__link + " link--dark"}
         data-main-menu-links
       >
         About</a
       >
       <a
         href="/#projects"
-        class={styles.nav__link + ' link--dark'}
+        class={styles.nav__link + " link--dark"}
         data-main-menu-links
       >
         Projects</a
       >
       <a
         href="/#contact"
-        class={styles.nav__link + ' link--dark'}
+        class={styles.nav__link + " link--dark"}
         data-main-menu-links
       >
         Contact</a
@@ -38,30 +38,30 @@ import { FaBarsStaggered } from 'react-icons/fa6';
 
     <FaBarsStaggered
       aria-label="menu"
-      className={styles['nav__ham-menu']}
+      className={styles["nav__ham-menu"]}
       data-ham-main-menu-button
     />
   </div>
 </nav>
 
 <script>
-  import styles from '../styles/layout/Navbar.module.css';
+  import styles from "../styles/layout/Navbar.module.css";
 
-  const mainMenu = document.querySelector('[data-main-menu]');
-  const mainMenuButton = document.querySelector('[data-ham-main-menu-button]');
-  const mainMenuLinks = document.querySelectorAll('[data-main-menu-links]');
+  const mainMenu = document.querySelector("[data-main-menu]");
+  const mainMenuButton = document.querySelector("[data-ham-main-menu-button]");
+  const mainMenuLinks = document.querySelectorAll("[data-main-menu-links]");
 
   const toggleMainMenu = () => {
-    mainMenu?.classList.toggle(styles['nav__main-menu--show']);
+    mainMenu?.classList.toggle(styles["nav__main-menu--show"]);
   };
 
   const closeMainMenu = () => {
-    mainMenu?.classList.remove(styles['nav__main-menu--show']);
+    mainMenu?.classList.remove(styles["nav__main-menu--show"]);
   };
 
-  mainMenuButton?.addEventListener('click', toggleMainMenu);
+  mainMenuButton?.addEventListener("click", toggleMainMenu);
 
   mainMenuLinks?.forEach((link) => {
-    link.addEventListener('click', closeMainMenu);
+    link.addEventListener("click", closeMainMenu);
   });
 </script>

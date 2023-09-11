@@ -1,6 +1,6 @@
 ---
-import { FaRegPaperPlane } from 'react-icons/fa';
-import styles from '@styles/sections/Contact.module.css';
+import { FaRegPaperPlane } from "react-icons/fa";
+import styles from "@styles/sections/Contact.module.css";
 ---
 
 <section id="contact" class="section">
@@ -8,11 +8,11 @@ import styles from '@styles/sections/Contact.module.css';
     <h2>Contact</h2>
 
     <p>
-      Get in touch with me directly on{' '}
+      Get in touch with me directly on{" "}
       <a href="mailto: ho.alexander.g@gmail.com" class={styles.contact__link}>
         ho.alexander.g@gmail.com
-      </a>{' '}
-      or send me a message
+      </a>{" "}
+       or send me a message
     </p>
 
     {/* Netlify Form */}
@@ -63,27 +63,27 @@ import styles from '@styles/sections/Contact.module.css';
 </section>
 
 <script>
-  import { toast } from 'react-toastify';
+  import { toast } from "react-toastify";
 
   const form: HTMLFormElement | null = document.querySelector(
-    '[data-form-contact]'
+    "[data-form-contact]",
   );
   const inputName: HTMLInputElement | null = document.querySelector(
-    '[data-form-input-name]'
+    "[data-form-input-name]",
   );
   const inputEmail: HTMLInputElement | null = document.querySelector(
-    '[data-form-input-email]'
+    "[data-form-input-email]",
   );
   const inputMessage: HTMLTextAreaElement | null = document.querySelector(
-    '[data-form-input-message]'
+    "[data-form-input-message]",
   );
 
   const resetForm = () => {
     if (!(inputName && inputEmail && inputMessage)) return;
 
-    inputName.value = '';
-    inputEmail.value = '';
-    inputMessage.value = '';
+    inputName.value = "";
+    inputEmail.value = "";
+    inputMessage.value = "";
   };
 
   const formSubmit = async (e: Event) => {
@@ -91,25 +91,25 @@ import styles from '@styles/sections/Contact.module.css';
 
     const formData = new FormData(form as HTMLFormElement | undefined);
 
-    const onSuccess = (message: string) => toast(message, { type: 'success' });
-    const onError = (message: string) => toast(message, { type: 'error' });
+    const onSuccess = (message: string) => toast(message, { type: "success" });
+    const onError = (message: string) => toast(message, { type: "error" });
 
     try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
 
-      if (!response.ok) throw new Error('Error sending message');
+      if (!response.ok) throw new Error("Error sending message");
 
-      onSuccess('Message sent successfully');
+      onSuccess("Message sent successfully");
       resetForm();
     } catch (error) {
-      onError('Error sending message');
+      onError("Error sending message");
       console.error(error);
     }
   };
 
-  form?.addEventListener('submit', formSubmit);
+  form?.addEventListener("submit", formSubmit);
 </script>

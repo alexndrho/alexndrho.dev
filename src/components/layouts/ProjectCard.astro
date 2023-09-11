@@ -1,7 +1,7 @@
 ---
-import { Image } from 'astro:assets';
-import { TbBrandGithub, TbExternalLink } from 'react-icons/tb';
-import styles from '@styles/layout/ProjectCard.module.css';
+import { Image } from "astro:assets";
+import { TbBrandGithub, TbExternalLink } from "react-icons/tb";
+import styles from "@styles/layout/ProjectCard.module.css";
 
 interface Props {
   title: string;
@@ -17,15 +17,15 @@ const { title, description, image, techStack, liveLink, sourceLink } =
 ---
 
 <article class={styles.card}>
-  <div class={styles['card__container-img']}>
-    <div class={styles['card__img-head']}>
-      <div class={styles['card__window-controls']}>
+  <div class={styles["card__container-img"]}>
+    <div class={styles["card__img-head"]}>
+      <div class={styles["card__window-controls"]}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      <div aria-label="website url" class={styles['card__url-txt']}>
+      <div aria-label="website url" class={styles["card__url-txt"]}>
         {liveLink}
       </div>
     </div>
@@ -36,10 +36,10 @@ const { title, description, image, techStack, liveLink, sourceLink } =
     <h3 class={styles.card__title}>{title}</h3>
     <p class={styles.card__desc}>{description}</p>
 
-    <div class={styles['card__tech-stacks']}>
+    <div class={styles["card__tech-stacks"]}>
       {
         techStack.map((tech) => (
-          <span class={styles['card__tech-stack']}>{tech}</span>
+          <span class={styles["card__tech-stack"]}>{tech}</span>
         ))
       }
     </div>
