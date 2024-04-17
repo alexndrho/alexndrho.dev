@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import styles from "../styles/pages/404.module.css";
+
+import "normalize.css";
+import "@styles/global.css";
+import "@styles/common/btn.css";
+---
+
+<Layout
+  title="Page Not Found - Alexander Gabriel Ho"
+  description="The page you are looking for does not exist."
+>
+  <div class={styles.container}>
+    <p class={styles["error-code"]}>404</p>
+
+    <h1 class={styles.title}>Page Not Found</h1>
+
+    <a href="/" class="btn btn--primary btn--dashed-effect">
+      Go back to the home page</a
+    >
+  </div>
+</Layout>
