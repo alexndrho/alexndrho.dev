@@ -5,21 +5,35 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+
+import { AstroFont } from 'astro-font';
 ---
 
 <meta charset="utf-8" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content={description} />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-  rel="stylesheet"
+<AstroFont
+  config={[
+    {
+      src: [],
+      preload: false,
+      display: "swap",
+      name: "Poppins",
+      fallback: "sans-serif",
+      cssVariable: "font-poppins",
+      googleFontsURL: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800',
+    },
+    {
+      src: [],
+      preload: false,
+      display: "swap",
+      name: "Montserrat",
+      fallback: "sans-serif",
+      cssVariable: "font-montserrat",
+      googleFontsURL: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800',
+    },
+  ]}
 />
 <meta name="generator" content={Astro.generator} />
 <slot name="head" />
