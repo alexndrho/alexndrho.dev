@@ -12,3 +12,12 @@
 .input--primary:focus {
   border-color: var(--color-primary);
 }
+
+.input--danger {
+  border: 0.075em solid var(--color-danger) !important;
+  color: var(--color-danger) !important;
+}
+
+.input--danger::placeholder {
+  color: var(--color-danger) !important;
+}

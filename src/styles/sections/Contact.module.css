@@ -11,10 +11,18 @@
 
 .contact__input,
 .contact__textarea {
-  margin-bottom: 1em;
+  margin-top: 1em;
   width: 100%;
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);
+}
+
+.contact__name {
+  margin-top: 0;
+}
+
+.contact__submit {
+  margin-top: 1em;
 }
 
 /* media queries */
