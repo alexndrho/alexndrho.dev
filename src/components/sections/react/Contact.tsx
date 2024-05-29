@@ -23,16 +23,16 @@ function Contact() {
     const onError = (message: string) => toast(message, { type: "error" });
 
     try {
-      const formData: Record<string, string> = {
-        name: data.name,
-        email: data.email,
-        message: data.message,
-      };
+      const formData = new FormData();
+      formData.append("form-name", "contact");
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
 
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: new URLSearchParams(formData as any).toString(),
       });
 
       if (!response.ok) throw new Error("Error sending message");
@@ -69,8 +69,6 @@ function Contact() {
         data-form-contact
         onSubmit={handleSubmit(formSubmit)}
       >
-        <input type="hidden" name="form-name" value="contact" />
-
         <input
           type="text"
           id="name"
