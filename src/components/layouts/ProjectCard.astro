@@ -14,6 +14,12 @@ interface Props {
 
 const { title, description, image, techStack, liveLink, sourceLink } =
   Astro.props;
+
+// remove trailing slash from liveLink if it exists
+let cleanLiveLink = liveLink;
+if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
+  cleanLiveLink = cleanLiveLink.slice(0, -1);
+}
 ---
 
 <article class={styles.card}>
@@ -26,7 +32,7 @@ const { title, description, image, techStack, liveLink, sourceLink } =
       </div>
 
       <div aria-label="website url" class={styles["card__url-txt"]}>
-        {liveLink}
+        {cleanLiveLink}
       </div>
     </div>
     <Image src={image} alt="project-preview" class={styles.card__img} />
@@ -46,9 +52,9 @@ const { title, description, image, techStack, liveLink, sourceLink } =
 
     <div class={styles.card__links}>
       {
-        liveLink && (
+        cleanLiveLink && (
           <a
-            href={liveLink}
+            href={cleanLiveLink}
             target="_blank"
             rel="noreferrer"
             class="btn btn--primary btn--dashed-effect"
