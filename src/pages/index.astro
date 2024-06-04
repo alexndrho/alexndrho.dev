@@ -3,21 +3,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Layout from "@layouts/Layout.astro";
-import Navbar from "@components/Navbar.astro";
 import Home from "@components/sections/Home.astro";
 import About from "@components/sections/About.astro";
 import Projects from "@components/sections/Projects.astro";
 import Contact from "@/components/sections/Contact.astro";
-import Footer from "@components/Footer.astro";
-
-import "normalize.css";
-import "@styles/global.css";
-import "@styles/common/btn.css";
-import "@styles/common/container.css";
-import "@styles/common/input.css";
-import "@styles/common/link.css";
-import "@styles/common/section.css";
-import "@styles/common/text.css";
 ---
 
 <Layout
@@ -26,14 +15,10 @@ import "@styles/common/text.css";
 >
   <ToastContainer client:idle />
 
-  <Navbar />
-
   <main>
     <Home />
     <About />
     <Projects />
     <Contact />
   </main>
-
-  <Footer />
 </Layout>

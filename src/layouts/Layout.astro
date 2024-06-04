@@ -1,5 +1,16 @@
 ---
 import BaseHead from "@components/BaseHead.astro";
+import Navbar from "@/components/Navbar.astro";
+import Footer from "@/components/Footer.astro";
+
+import "normalize.css";
+import "@styles/global.css";
+import "@styles/common/btn.css";
+import "@styles/common/container.css";
+import "@styles/common/input.css";
+import "@styles/common/link.css";
+import "@styles/common/section.css";
+import "@styles/common/text.css";
 
 export interface Props {
   title: string;
@@ -16,6 +27,10 @@ const { title, description } = Astro.props;
     </BaseHead>
   </head>
   <body>
+    <Navbar />
+
     <slot />
+
+    <Footer />
   </body>
 </html>
