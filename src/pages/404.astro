@@ -1,6 +1,5 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import styles from "../styles/pages/404.module.css";
 
 import "normalize.css";
 import "@styles/global.css";
@@ -11,13 +10,34 @@ import "@styles/common/btn.css";
   title="Page Not Found - Alexander Gabriel Ho"
   description="The page you are looking for does not exist."
 >
-  <div class={styles.container}>
-    <p class={styles["error-code"]}>404</p>
+  <div class="container">
+    <p class="error-code">404</p>
 
-    <h1 class={styles.title}>Page Not Found</h1>
+    <h1 class="title">Page Not Found</h1>
 
     <a href="/" class="btn btn--primary btn--dashed-effect">
       Go back to the home page</a
     >
   </div>
 </Layout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .error-code {
+    margin: 0;
+    font-size: var(--font-size-9xl);
+    font-weight: bolder;
+  }
+
+  .title {
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+</style>

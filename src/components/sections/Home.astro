@@ -1,29 +1,26 @@
 ---
 import { Image } from "astro:assets";
 import { FaGithub, FaLinkedin, FaAt } from "react-icons/fa6";
-import styles from "@styles/sections/Home.module.css";
 import me from "@assets/me.webp";
 ---
 
-<section id="home" class={`section ${styles.hero}`}>
-  <div class={`container container--section ${styles["hero__container"]} `}>
-    <div class={styles.hero__info}>
-      <h1 class={styles.hero__title}>
-        <span class={`${styles.hero__span} ${styles["hero__span--title"]}`}>
-          Hi, my name is
-        </span>
+<section id="home" class="section hero">
+  <div class="container container--section hero__container">
+    <div class="hero__info">
+      <h1 class="hero__title">
+        <span class="hero__span hero__span--title"> Hi, my name is</span>
          Alexander Gabriel Ho.
       </h1>
 
-      <p class={styles.hero__description}>
+      <p class="hero__description">
         I&apos;m a
-        <span class={`${styles.hero__span} ${styles["hero__span--highlight"]}`}>
+        <span class="hero__span hero__span--highlight">
           Full Stack Web Developer
         </span>
          based in Manila, Philippines. 📍
       </p>
 
-      <div class={styles.hero__links}>
+      <div class="hero__links">
         <a
           href="https://github.com/alexndrho"
           aria-label="Github"
@@ -59,9 +56,97 @@ import me from "@assets/me.webp";
         src={me}
         alt="Alexander Ho"
         draggable={false}
-        class={styles["hero__profile-pic"]}
+        class="hero__profile-pic"
         loading="eager"
       />
     </div>
   </div>
 </section>
+
+<style>
+  .hero {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  .hero__container {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* info */
+  .hero__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__info,
+  .hero__span {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+  }
+
+  .hero__span--title {
+    margin-bottom: 0.25em;
+    display: block;
+  }
+
+  .hero__span--highlight {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+
+  .hero__title {
+    margin: 0 0 0.125em 0;
+    font-size: var(--font-size-6xl);
+    font-weight: 700;
+  }
+
+  .hero__description {
+    margin: 0 0 1em 0;
+    line-height: 1.5em;
+  }
+
+  .hero__links {
+    display: flex;
+    gap: 0.75em;
+  }
+
+  /* hero-img */
+  .hero__profile-pic {
+    margin-bottom: 1.25rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    border: 0.25rem solid var(--color-dark);
+    border-radius: 50%;
+    user-select: none;
+  }
+
+  /* media queries */
+  @media (--lg-viewport) {
+    .hero__container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .hero__info,
+    .hero__span {
+      font-size: var(--font-size-2xl);
+    }
+
+    .hero__title {
+      font-size: var(--font-size-7xl);
+    }
+
+    .hero__profile-pic {
+      margin: 0 0 0 1.25rem;
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+</style>

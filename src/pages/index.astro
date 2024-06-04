@@ -7,7 +7,7 @@ import Navbar from "@components/Navbar.astro";
 import Home from "@components/sections/Home.astro";
 import About from "@components/sections/About.astro";
 import Projects from "@components/sections/Projects.astro";
-import Contact from "@/components/sections/react/Contact";
+import Contact from "@/components/sections/Contact.astro";
 import Footer from "@components/Footer.astro";
 
 import "normalize.css";
@@ -32,9 +32,7 @@ import "@styles/common/text.css";
     <Home />
     <About />
     <Projects />
-    <section id="contact" class="section">
-      <Contact client:idle />
-    </section>
+    <Contact />
   </main>
 
   <Footer />

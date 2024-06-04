@@ -1,16 +1,12 @@
----
-import styles from "@styles/sections/Footer.module.css";
----
-
-<footer class={styles.footer}>
-  <div class={`container container--footer ${styles["footer__container"]}`}>
-    <div class={styles.footer__section}>
-      <h2 class={styles.footer__title}>Connect</h2>
+<footer class="footer">
+  <div class="container container--footer footer__container">
+    <div class="footer__section">
+      <h2 class="footer__title">Connect</h2>
 
       <a
         href="https://github.com/alexndrho"
         aria-label="Github"
-        class={`link ${styles.footer__link}`}
+        class="link footer__link"
         target="_blank"
         rel="noreferrer"
       >
@@ -20,7 +16,7 @@ import styles from "@styles/sections/Footer.module.css";
       <a
         href="https://www.linkedin.com/in/alexander-gabriel-ho/"
         aria-label="LinkedIn"
-        class={`link ${styles.footer__link}`}
+        class="link footer__link"
         target="_blank"
         rel="noreferrer"
       >
@@ -28,14 +24,46 @@ import styles from "@styles/sections/Footer.module.css";
       </a>
     </div>
 
-    <div class={styles.footer__section}>
-      <h2 class={styles.footer__title}>Get in Touch</h2>
-      <a
-        href="mailto: ho.alexander.g@gmail.com"
-        class={`link ${styles.footer__link}`}
-      >
+    <div class="footer__section">
+      <h2 class="footer__title">Get in Touch</h2>
+      <a href="mailto: ho.alexander.g@gmail.com" class="footer__link">
         ho.alexander.g@gmail.com
       </a>
     </div>
   </div>
 </footer>
+
+<style>
+  .footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__title {
+    margin: 0 0 0.25em 0;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+  }
+
+  .footer__link {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+    font-weight: 400;
+    color: var(--color-secondary);
+    text-decoration: none;
+  }
+
+  .footer__link:hover {
+    color: var(--color-primary);
+  }
+</style>

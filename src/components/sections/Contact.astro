@@ -1,0 +1,25 @@
+---
+import ContactForm from "./react/ContactForm";
+---
+
+<section id="contact" class="section">
+  <div class="container container--section">
+    <h2>Contact</h2>
+
+    <p>
+      Get in touch with me directly on{" "}
+      <a href="mailto: ho.alexander.g@gmail.com" class="contact__link">
+        ho.alexander.g@gmail.com
+      </a>{" "}
+       or send me a message
+    </p>
+
+    <ContactForm client:idle />
+  </div>
+</section>
+
+<style>
+  .contact__link {
+    color: var(--color-primary);
+  }
+</style>

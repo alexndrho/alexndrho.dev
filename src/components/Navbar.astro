@@ -1,62 +1,42 @@
 ---
-import styles from "@styles/layout/Navbar.module.css";
 import { FaBarsStaggered } from "react-icons/fa6";
 ---
 
-<nav class={styles.nav}>
-  <div class={`${styles.nav__container} container container--nav`}>
-    <a
-      href="/#home"
-      class={`${styles.nav__logo} ${styles.nav__link} link--dark`}
-    >
-      alexndrho
-    </a>
+<nav class="nav">
+  <div class="nav__container container container--nav">
+    <a href="/#home" class="nav__logo nav__link link--dark"> alexndrho</a>
 
-    <div class={styles["nav__main-menu"]} data-main-menu>
-      <a
-        href="/#about"
-        class={styles.nav__link + " link--dark"}
-        data-main-menu-links
-      >
+    <div class="nav__main-menu" data-main-menu>
+      <a href="/#about" class="nav__link link--dark" data-main-menu-links>
         About</a
       >
-      <a
-        href="/#projects"
-        class={styles.nav__link + " link--dark"}
-        data-main-menu-links
-      >
+      <a href="/#projects" class="nav__link link--dark" data-main-menu-links>
         Projects</a
       >
-      <a
-        href="/#contact"
-        class={styles.nav__link + " link--dark"}
-        data-main-menu-links
-      >
+      <a href="/#contact" class="nav__link link--dark" data-main-menu-links>
         Contact</a
       >
     </div>
 
     <FaBarsStaggered
       aria-label="menu"
-      className={styles["nav__ham-menu"]}
+      className="nav__ham-menu"
       data-ham-main-menu-button
     />
   </div>
 </nav>
 
 <script>
-  import styles from "../styles/layout/Navbar.module.css";
-
   const mainMenu = document.querySelector("[data-main-menu]");
   const mainMenuButton = document.querySelector("[data-ham-main-menu-button]");
   const mainMenuLinks = document.querySelectorAll("[data-main-menu-links]");
 
   const toggleMainMenu = () => {
-    mainMenu?.classList.toggle(styles["nav__main-menu--show"]);
+    mainMenu?.classList.toggle("nav__main-menu--show");
   };
 
   const closeMainMenu = () => {
-    mainMenu?.classList.remove(styles["nav__main-menu--show"]);
+    mainMenu?.classList.remove("nav__main-menu--show");
   };
 
   mainMenuButton?.addEventListener("click", toggleMainMenu);
@@ -65,3 +45,93 @@ import { FaBarsStaggered } from "react-icons/fa6";
     link.addEventListener("click", closeMainMenu);
   });
 </script>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    background-color: var(--color-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 98;
+  }
+
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__logo {
+    font-size: var(--font-size-xl) !important;
+    font-weight: 700 !important;
+    user-select: none;
+  }
+
+  .nav__main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+
+    transition: transform 0.2s ease-out;
+  }
+
+  /* .show-nav is added to nav .main-menu when the menu is open in mobile view */
+  .nav__main-menu--show {
+    transform: translateX(0);
+  }
+
+  .nav__link {
+    text-decoration: none;
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+
+    transition: color 0.2s ease-out;
+  }
+
+  .nav__ham-menu {
+    font-size: var(--font-size-xl);
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  /* media queries */
+  @media (--lg-viewport) {
+    .nav__ham-menu {
+      display: none;
+    }
+
+    .nav__main-menu {
+      position: static;
+      transform: translate3d(0, 0, 0);
+      width: auto;
+      height: auto;
+      background: none;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2em;
+    }
+
+    .nav__link {
+      font-size: var(--font-size-md);
+    }
+  }
+</style>
