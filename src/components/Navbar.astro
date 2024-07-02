@@ -1,8 +1,15 @@
 ---
 import { FaBarsStaggered } from "react-icons/fa6";
+
+interface Props {
+  // float prop is used to make the navbar float on the page
+  float?: boolean;
+}
+
+const { float } = Astro.props;
 ---
 
-<nav class="nav">
+<nav class={`nav${float ? " nav--float" : ""}`}>
   <div class="nav__container container container--nav">
     <a href="/#home" class="nav__logo nav__link link--dark"> alexndrho</a>
 
@@ -48,8 +55,8 @@ import { FaBarsStaggered } from "react-icons/fa6";
 
 <style>
   .nav {
-    position: fixed;
-    top: 0;
+    /* position: fixed;
+    top: 0; */
 
     width: 100%;
     background-color: var(--color-light);
@@ -60,6 +67,11 @@ import { FaBarsStaggered } from "react-icons/fa6";
     align-items: center;
 
     z-index: 98;
+  }
+
+  .nav--float {
+    position: fixed;
+    top: 0;
   }
 
   .nav__container {
