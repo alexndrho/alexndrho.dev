@@ -107,7 +107,7 @@ function ContactForm() {
         className={`${styles.contact__textarea} input input--primary ${
           formState.errors.message ? "input--danger" : ""
         }`}
-        rows={8}
+        rows={6}
         data-form-input-message
         {...register("message", {
           required: "Please enter your message",

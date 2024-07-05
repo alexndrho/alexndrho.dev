@@ -105,10 +105,8 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
   }
 
   .card__img-head {
-    font-size: var(--font-size-xs);
     width: 100%;
-    height: 3em;
-    padding: 0 1em 0;
+    padding: 0.5em 0.75em;
 
     background-color: var(--color-light);
 
@@ -126,8 +124,8 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
   }
 
   .card__window-controls > * {
-    width: 1.125em;
-    height: 1.125em;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
   }
 
@@ -144,7 +142,7 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
   }
 
   .card__url-txt {
-    font-size: 1em;
+    font-size: var(--font-size-xs);
     width: 65%;
 
     white-space: nowrap;
@@ -152,7 +150,7 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
     text-overflow: ellipsis;
 
     margin: 0 auto 0;
-    padding: 0.5em 1em;
+    padding: 0.25em 0.5em;
 
     border-radius: var(--border-radius-xs);
     border: 1px solid var(--color-light-darkest);
@@ -162,6 +160,7 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
   .card__img {
     width: 100%;
     height: unset;
+    border-radius: unset;
   }
 
   .card__info {
@@ -170,7 +169,7 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
   }
 
   .card__title {
-    margin: 0 0 0.75em 0;
+    margin: 0 0 0.75rem 0;
     font-size: var(--font-size-2xl);
   }
 
@@ -184,15 +183,13 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
   }
 
   .card .card__desc {
-    margin: 0 0 0.75em 0;
+    margin: 0 0 0.75rem 0;
     color: var(--color-secondary);
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-md);
     font-weight: 500;
   }
 
   .card__tech-stacks {
-    margin-bottom: 1.25em;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     gap: 0.5em;
@@ -200,15 +197,18 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
   }
 
   .card__tech-stack {
-    padding: 0.25em 0.5em;
+    padding: 0.125em 0.5em;
     border-radius: var(--border-radius-xs);
     background-color: var(--color-secondary);
     color: var(--color-light);
     font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+    font-size: 0.75rem;
     font-weight: 500;
   }
 
   .card__links {
+    font-size: var(--font-size-sm);
     display: flex;
     flex-direction: row;
     gap: 0.75em;

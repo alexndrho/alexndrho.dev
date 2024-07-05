@@ -8,9 +8,8 @@
 
 .container--nav {
   margin: 0 auto;
-  height: 4em;
   width: 100%;
-  padding: 0 var(--size-padding);
+  padding: 0.75rem var(--size-padding);
   max-width: calc(var(--size-max-width-lg) + (var(--size-padding) * 2));
 }
 

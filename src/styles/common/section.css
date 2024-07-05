@@ -7,15 +7,5 @@
 }
 
 .section h2 {
-  margin-top: 0;
   color: var(--color-primary);
-  font-size: var(--font-size-2xl);
-  line-height: var(--line-height-2xl);
-}
-
-@media (--lg-viewport) {
-  .section h2 {
-    font-size: var(--font-size-3xl);
-    line-height: var(--line-height-3xl);
-  }
 }
