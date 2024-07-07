@@ -1,0 +1,84 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+import Layout from "@layouts/Layout.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+
+const blogs = (await getCollection("blog")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<Layout
+  title="Blog - Alexander Gabriel Ho"
+  description="A collection of blog posts by Alexander Gabriel Ho."
+>
+  <div class="container">
+    <h1 class="title">Blog</h1>
+
+    <div class="blogs">
+      {
+        blogs.map((blog) => (
+          <a href={`/blog/${blog.slug}`} class="blog">
+            <Image
+              src={blog.data.heroImage}
+              alt="hero"
+              loading="lazy"
+              class="blog__hero"
+            />
+            <h2 class="blog__title">{blog.data.title}</h2>
+            <FormattedDate date={blog.data.pubDate} />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <style>
+    .container {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
+
+    .title {
+      margin-bottom: 0.5em;
+    }
+
+    .blogs {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .blog {
+      color: var(--color-dark);
+      text-decoration: none;
+      transition: color 0.1s ease-in-out;
+    }
+
+    .blog:hover {
+      color: var(--color-primary);
+    }
+
+    .blog__hero {
+      margin-bottom: 0.25rem;
+      transition: box-shadow 0.1s ease-in-out;
+    }
+
+    .blog:hover .blog__hero {
+      box-shadow: var(--blog-box-shadow);
+    }
+
+    .blog__title {
+      font-size: var(--font-size-2xl);
+      margin-bottom: 0.0625em;
+    }
+
+    @media (--lg-viewport) {
+      .blogs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</Layout>
