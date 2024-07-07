@@ -179,11 +179,6 @@ blockquote {
   font-size: 1.333em;
 }
 
-hr {
-  border: none;
-  /* border-top: 1px solid rgb(var(--gray-light)); */
-}
-
 @media (--lg-viewport) {
   html {
     font-size: 18px;
