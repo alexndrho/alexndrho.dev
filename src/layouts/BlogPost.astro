@@ -6,8 +6,8 @@ import BaseHead from "@components/BaseHead.astro";
 import ProgressBar from "@components/ProgressBar.astro";
 import NavBar from "@components/Navbar.astro";
 import Footer from "@components/Footer.astro";
+import ScrollToTop from "@components/ScrollToTop.astro";
 import FormattedDate from "@components/FormattedDate.astro";
-import { TbArrowUp } from "react-icons/tb";
 
 import "normalize.css";
 import "@styles/global.css";
@@ -61,12 +61,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       </article>
     </main>
 
-    <button
-      class="scroll-to-top btn btn--primary btn--square btn--dashed-effect"
-    >
-      <TbArrowUp />
-    </button>
-
+    <ScrollToTop />
     <Footer />
 
     <style>
@@ -115,14 +110,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       .last-updated-on {
         font-style: italic;
       }
-
-      .scroll-to-top {
-        position: fixed;
-        bottom: 1em;
-        right: 1em;
-        z-index: 90;
-        font-size: var(--font-size-2xl);
-      }
     </style>
 
     <script>
@@ -140,19 +127,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
         progressBar.value = scrolled;
       });
-    </script>
-
-    <script>
-      const scrollToTopButton = document.querySelector(".scroll-to-top");
-
-      if (scrollToTopButton) {
-        scrollToTopButton.addEventListener("click", () => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        });
-      }
     </script>
   </body>
 </html>

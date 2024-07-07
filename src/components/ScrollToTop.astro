@@ -1,0 +1,30 @@
+---
+import { TbArrowUp } from "react-icons/tb";
+---
+
+<button class="scroll-to-top btn btn--primary btn--square btn--dashed-effect">
+  <TbArrowUp />
+</button>
+
+<style>
+  .scroll-to-top {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 90;
+    font-size: var(--font-size-2xl);
+  }
+</style>
+
+<script>
+  const scrollToTopButton = document.querySelector(".scroll-to-top");
+
+  if (scrollToTopButton) {
+    scrollToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+</script>
