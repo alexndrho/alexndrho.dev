@@ -20,6 +20,10 @@
   color: var(--color-light);
 }
 
+.btn--square {
+  padding: 0.5em;
+}
+
 /* effects */
 .btn--dashed-effect {
   position: relative;

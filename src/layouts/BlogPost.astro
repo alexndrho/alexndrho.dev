@@ -1,0 +1,158 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+import BaseHead from "@components/BaseHead.astro";
+import ProgressBar from "@components/ProgressBar.astro";
+import NavBar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+import { TbArrowUp } from "react-icons/tb";
+
+import "normalize.css";
+import "@styles/global.css";
+import "@styles/common/btn.css";
+import "@styles/common/container.css";
+import "@styles/common/input.css";
+import "@styles/common/link.css";
+import "@styles/common/section.css";
+import "@styles/common/text.css";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body>
+    <ProgressBar />
+    <NavBar />
+
+    <main>
+      <article>
+        <div class="hero-image">
+          {heroImage && <Image src={heroImage} alt="hero" />}
+        </div>
+
+        <div class="prose">
+          <div class="title">
+            <div class="date">
+              <FormattedDate date={pubDate} />
+              {
+                updatedDate && (
+                  <div class="last-updated-on">
+                    Last updated on <FormattedDate date={updatedDate} />
+                  </div>
+                )
+              }
+            </div>
+
+            <h1>{title}</h1>
+
+            <hr />
+          </div>
+
+          <slot />
+        </div>
+      </article>
+    </main>
+
+    <button
+      class="scroll-to-top btn btn--primary btn--square btn--dashed-effect"
+    >
+      <TbArrowUp />
+    </button>
+
+    <Footer />
+
+    <style>
+      main {
+        padding: 1.5em 1em;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+      }
+
+      .hero-image {
+        width: 100%;
+      }
+
+      .hero-image img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+      }
+
+      .prose {
+        width: 800px;
+        max-width: 100%;
+        margin: auto;
+        padding-top: 1em;
+        color: rgb(var(--gray-dark));
+      }
+
+      .title {
+        margin-bottom: 1em;
+        padding: 1em 0;
+        text-align: center;
+        line-height: 1;
+      }
+
+      .title h1 {
+        margin: 0 0 0.5em 0;
+      }
+
+      .date {
+        margin-bottom: 0.5em;
+        color: rgb(var(--gray));
+      }
+
+      .last-updated-on {
+        font-style: italic;
+      }
+
+      .scroll-to-top {
+        position: fixed;
+        bottom: 1em;
+        right: 1em;
+        z-index: 90;
+        font-size: var(--font-size-2xl);
+      }
+    </style>
+
+    <script>
+      const progressBar = document.querySelector(
+        "progress"
+      ) as HTMLProgressElement;
+
+      const target = document.querySelector("main");
+
+      window.addEventListener("scroll", () => {
+        const scrollableHeight = target
+          ? target.scrollHeight - window.innerHeight
+          : 0;
+        const scrolled = (window.scrollY / scrollableHeight) * 100;
+
+        progressBar.value = scrolled;
+      });
+    </script>
+
+    <script>
+      const scrollToTopButton = document.querySelector(".scroll-to-top");
+
+      if (scrollToTopButton) {
+        scrollToTopButton.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
