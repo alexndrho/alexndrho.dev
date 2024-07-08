@@ -83,6 +83,10 @@ const { title, description, pubDate, updatedDate, heroImage, minutesRead } =
       .hero-image img {
         display: block;
         margin: 0 auto;
+        width: 100%;
+        max-width: 960px;
+        aspect-ratio: 2 / 1;
+        object-fit: cover;
         border-radius: 12px;
         box-shadow: var(--box-shadow);
       }

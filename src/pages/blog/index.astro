@@ -63,6 +63,8 @@ const blogs = (await getCollection("blog")).sort(
 
     .blog__hero {
       margin-bottom: 0.25rem;
+      aspect-ratio: 2 / 1;
+      object-fit: cover;
       transition: box-shadow 0.1s ease-in-out;
     }
 
