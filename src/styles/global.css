@@ -130,6 +130,14 @@ b {
   font-weight: 700;
 }
 
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
 p {
   margin-bottom: 1em;
 }
