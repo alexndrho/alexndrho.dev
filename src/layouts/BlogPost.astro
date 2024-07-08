@@ -18,9 +18,12 @@ import "@styles/common/link.css";
 import "@styles/common/section.css";
 import "@styles/common/text.css";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & {
+  minutesRead: string;
+};
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, minutesRead } =
+  Astro.props;
 ---
 
 <html lang="en">
@@ -52,6 +55,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             </div>
 
             <h1>{title}</h1>
+            <p class="minutes-read">{minutesRead}</p>
 
             <hr />
           </div>
@@ -98,10 +102,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         line-height: 1;
       }
 
-      .title h1 {
-        margin: 0 0 0.5em 0;
-      }
-
       .date {
         margin-bottom: 0.5em;
         color: rgb(var(--gray));
@@ -109,6 +109,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
       .last-updated-on {
         font-style: italic;
+      }
+
+      .minutes-read {
+        font-size: var(--font-size-lg);
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: var(--color-primary);
       }
     </style>
 
