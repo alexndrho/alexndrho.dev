@@ -1,0 +1,52 @@
+---
+import { TbArrowUp } from "react-icons/tb";
+---
+
+<button
+  class="scroll-to-top btn btn--primary btn--square btn--dashed-effect hidden"
+>
+  <TbArrowUp />
+</button>
+
+<style>
+  .scroll-to-top {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 90;
+    font-size: var(--font-size-2xl);
+    transition:
+      opacity 0.25s,
+      visibility 0.25s,
+      transform 0.25s; /* Add transform to the transition */
+  }
+
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(
+      100%
+    ) !important; /* Remain hidden when .hidden is applied */
+  }
+</style>
+
+<script>
+  const scrollToTopButton = document.querySelector(".scroll-to-top");
+
+  if (scrollToTopButton) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 20) {
+        scrollToTopButton.classList.remove("hidden");
+      } else {
+        scrollToTopButton.classList.add("hidden");
+      }
+    });
+
+    scrollToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+</script>

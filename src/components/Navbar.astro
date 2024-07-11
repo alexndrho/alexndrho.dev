@@ -23,6 +23,12 @@ const { float } = Astro.props;
       <a href="/#contact" class="nav__link link--dark" data-main-menu-links>
         Contact</a
       >
+
+      <div class="divider"></div>
+
+      <a href="/blog" class="nav__link link--dark" data-main-menu-links>
+        Blog</a
+      >
     </div>
 
     <FaBarsStaggered
@@ -91,16 +97,18 @@ const { float } = Astro.props;
     top: 0;
     left: 0;
     transform: translateX(100%);
+    z-index: 98;
 
     width: 100vw;
     height: 100vh;
+    padding: 5em;
 
     background: var(--color-light);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5em;
+    gap: 4em;
 
     transition: transform 0.2s ease-out;
   }
@@ -116,6 +124,11 @@ const { float } = Astro.props;
     font-weight: 600;
 
     transition: color 0.2s ease-out;
+  }
+
+  .divider {
+    border-top: 0.125rem solid var(--color-secondary);
+    width: 100%;
   }
 
   .nav__ham-menu {
@@ -135,6 +148,7 @@ const { float } = Astro.props;
       transform: translate3d(0, 0, 0);
       width: auto;
       height: auto;
+      padding: 0;
       background: none;
       flex-direction: row;
       justify-content: flex-end;
@@ -144,6 +158,12 @@ const { float } = Astro.props;
 
     .nav__link {
       font-size: var(--font-size-md);
+    }
+
+    .divider {
+      border-inline-start: 0.125rem solid var(--color-secondary);
+      height: auto;
+      align-self: stretch;
     }
   }
 </style>

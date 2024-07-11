@@ -1,0 +1,36 @@
+---
+import "normalize.css";
+import "@styles/global.css";
+---
+
+<progress class="progress-bar" role="progressbar" value="0" max="100"
+></progress>
+
+<style>
+  .progress-bar {
+    position: fixed;
+    width: 100%;
+    height: 0.25em;
+    color: var(--color-primary);
+    -webkit-appearance: none;
+    appearance: none;
+
+    transition: width 0.2s ease;
+  }
+
+  /* For Webkit browsers */
+  .progress-bar::-webkit-progress-bar {
+    background-color: transparent; /* Make background transparent */
+  }
+
+  .progress-bar::-webkit-progress-value {
+    background-color: var(--color-primary);
+    transition: width 0.2s ease;
+  }
+
+  /* For Firefox */
+  .progress-bar::-moz-progress-bar {
+    background-color: var(--color-primary);
+    transition: width 0.2s ease;
+  }
+</style>
