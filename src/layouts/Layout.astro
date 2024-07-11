@@ -15,11 +15,9 @@ import "@styles/common/text.css";
 export interface Props {
   title: string;
   description: string;
-
-  navBarFloat?: boolean;
 }
 
-const { title, description, navBarFloat } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <html lang="en">
@@ -29,7 +27,7 @@ const { title, description, navBarFloat } = Astro.props;
     </BaseHead>
   </head>
   <body>
-    <Navbar float={navBarFloat} />
+    <Navbar float />
 
     <slot />
 
