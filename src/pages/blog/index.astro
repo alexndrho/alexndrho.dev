@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
+import { TbFile, TbFileFilled, TbRss } from "react-icons/tb";
 
 import Layout from "@layouts/Layout.astro";
 import FormattedDate from "@components/FormattedDate.astro";
@@ -16,6 +17,21 @@ const blogs = (await getCollection("blog")).sort(
 >
   <div class="container">
     <h1 class="title">Blog</h1>
+
+    <div class="blog-hero">
+      <div class="blog-hero__item">
+        <TbFileFilled />
+
+        <p>
+          {blogs.length} Blog post{blogs.length === 1 ? "" : "s"}
+        </p>
+      </div>
+
+      <a href="/blog/rss.xml" class="blog-hero__item link link--no-underline">
+        <TbRss />
+         Subscribe to RSS feed</a
+      >
+    </div>
 
     <div class="blogs">
       {
@@ -43,6 +59,18 @@ const blogs = (await getCollection("blog")).sort(
 
     .title {
       margin-bottom: 0.5em;
+    }
+
+    .blog-hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .blog-hero__item {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
     }
 
     .blogs {
