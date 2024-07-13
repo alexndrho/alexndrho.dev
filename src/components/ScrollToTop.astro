@@ -2,14 +2,14 @@
 import { TbArrowUp } from "react-icons/tb";
 ---
 
-<button
-  class="scroll-to-top btn btn--primary btn--square btn--dashed-effect hidden"
->
-  <TbArrowUp />
-</button>
+<div class="button-container hidden">
+  <button class="btn btn--primary btn--square btn--dashed-effect">
+    <TbArrowUp />
+  </button>
+</div>
 
 <style>
-  .scroll-to-top {
+  .button-container {
     position: fixed;
     bottom: 1em;
     right: 1em;
@@ -31,7 +31,7 @@ import { TbArrowUp } from "react-icons/tb";
 </style>
 
 <script>
-  const scrollToTopButton = document.querySelector(".scroll-to-top");
+  const scrollToTopButton = document.querySelector(".button-container");
 
   if (scrollToTopButton) {
     window.addEventListener("scroll", () => {
