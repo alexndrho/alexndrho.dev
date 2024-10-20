@@ -31,22 +31,24 @@ import { TbArrowUp } from "react-icons/tb";
 </style>
 
 <script>
-  const scrollToTopButton = document.querySelector(".button-container");
+  document.addEventListener("astro:page-load", () => {
+    const scrollToTopButton = document.querySelector(".button-container");
 
-  if (scrollToTopButton) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 20) {
-        scrollToTopButton.classList.remove("hidden");
-      } else {
-        scrollToTopButton.classList.add("hidden");
-      }
-    });
-
-    scrollToTopButton.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+    if (scrollToTopButton) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          scrollToTopButton.classList.remove("hidden");
+        } else {
+          scrollToTopButton.classList.add("hidden");
+        }
       });
-    });
-  }
+
+      scrollToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+  });
 </script>

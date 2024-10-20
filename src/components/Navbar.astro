@@ -40,22 +40,26 @@ const { float } = Astro.props;
 </nav>
 
 <script>
-  const mainMenu = document.querySelector("[data-main-menu]");
-  const mainMenuButton = document.querySelector("[data-ham-main-menu-button]");
-  const mainMenuLinks = document.querySelectorAll("[data-main-menu-links]");
+  document.addEventListener("astro:page-load", () => {
+    const mainMenu = document.querySelector("[data-main-menu]");
+    const mainMenuButton = document.querySelector(
+      "[data-ham-main-menu-button]"
+    );
+    const mainMenuLinks = document.querySelectorAll("[data-main-menu-links]");
 
-  const toggleMainMenu = () => {
-    mainMenu?.classList.toggle("nav__main-menu--show");
-  };
+    const toggleMainMenu = () => {
+      mainMenu?.classList.toggle("nav__main-menu--show");
+    };
 
-  const closeMainMenu = () => {
-    mainMenu?.classList.remove("nav__main-menu--show");
-  };
+    const closeMainMenu = () => {
+      mainMenu?.classList.remove("nav__main-menu--show");
+    };
 
-  mainMenuButton?.addEventListener("click", toggleMainMenu);
+    mainMenuButton?.addEventListener("click", toggleMainMenu);
 
-  mainMenuLinks?.forEach((link) => {
-    link.addEventListener("click", closeMainMenu);
+    mainMenuLinks?.forEach((link) => {
+      link.addEventListener("click", closeMainMenu);
+    });
   });
 </script>
 

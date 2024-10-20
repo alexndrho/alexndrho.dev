@@ -38,7 +38,16 @@ const { title, description, pubDate, updatedDate, heroImage, minutesRead } =
     <main>
       <article>
         <div class="hero-image">
-          {heroImage && <Image src={heroImage} alt="hero" loading="eager" />}
+          {
+            heroImage && (
+              <Image
+                src={heroImage}
+                alt="hero"
+                loading="eager"
+                transition:name={title}
+              />
+            )
+          }
         </div>
 
         <div class="prose">
@@ -125,19 +134,21 @@ const { title, description, pubDate, updatedDate, heroImage, minutesRead } =
     </style>
 
     <script>
-      const progressBar = document.querySelector(
-        "progress"
-      ) as HTMLProgressElement;
+      document.addEventListener("astro:page-load", () => {
+        const progressBar = document.querySelector(
+          "progress"
+        ) as HTMLProgressElement;
 
-      const target = document.querySelector("main");
+        const target = document.querySelector("main");
 
-      window.addEventListener("scroll", () => {
-        const scrollableHeight = target
-          ? target.scrollHeight - window.innerHeight
-          : 0;
-        const scrolled = (window.scrollY / scrollableHeight) * 100;
+        window.addEventListener("scroll", () => {
+          const scrollableHeight = target
+            ? target.scrollHeight - window.innerHeight
+            : 0;
+          const scrolled = (window.scrollY / scrollableHeight) * 100;
 
-        progressBar.value = scrolled;
+          progressBar.value = scrolled;
+        });
       });
     </script>
   </body>

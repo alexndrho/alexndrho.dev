@@ -42,6 +42,7 @@ const blogs = (await getCollection("blog")).sort(
               alt="hero"
               loading="lazy"
               class="blog__hero"
+              transition:name={blog.data.title}
             />
             <h2 class="blog__title">{blog.data.title}</h2>
             <FormattedDate date={blog.data.pubDate} />

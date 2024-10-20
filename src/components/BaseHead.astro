@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+
 export interface Props {
   title: string;
   description: string;
@@ -24,3 +26,4 @@ const { title, description } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 <slot name="head" />
 <title>{title}</title>
+<ViewTransitions />
