@@ -24,16 +24,20 @@ function ContactForm() {
 
     try {
       const formData = new FormData();
-      formData.append("form-name", "contact");
       formData.append("name", data.name);
       formData.append("email", data.email);
       formData.append("message", data.message);
 
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
-      });
+      const response = await fetch(
+        `https://formspree.io/f/${import.meta.env.PUBLIC_FORM_ID}`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: formData,
+        },
+      );
 
       if (!response.ok) throw new Error("Error sending message");
 
