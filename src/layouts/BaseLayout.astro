@@ -1,0 +1,30 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+
+import "normalize.css";
+import "@styles/global.css";
+import "@styles/common/btn.css";
+import "@styles/common/container.css";
+import "@styles/common/input.css";
+import "@styles/common/link.css";
+import "@styles/common/section.css";
+import "@styles/common/text.css";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description}>
+      <slot name="head" slot="head" />
+    </BaseHead>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
