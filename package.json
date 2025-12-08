@@ -17,6 +17,7 @@
     "@astrojs/rss": "^4.0.14",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "@vercel/analytics": "^1.6.1",
     "astro": "^5.16.4",
     "mdast-util-to-string": "^4.0.0",
     "normalize.css": "^8.0.1",
