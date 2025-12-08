@@ -16,7 +16,7 @@ export interface Props {
   title: string;
   description: string;
 
-  navBarFloat?: boolean;
+  navBarFloat?: boolean | undefined;
 }
 
 const { title, description, navBarFloat } = Astro.props;
