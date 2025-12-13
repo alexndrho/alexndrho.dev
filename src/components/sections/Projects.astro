@@ -1,7 +1,8 @@
 ---
 import ProjectCard from "@components/layouts/ProjectCard.astro";
-import brainiacPreview from "@assets/project-previews/brainiac.webp";
 import stickyThoughtsPreview from "@assets/project-previews/sticky-thoughts.png";
+import linkUpPreview from "@assets/project-previews/linkup.jpeg";
+import brainiacPreview from "@assets/project-previews/brainiac.webp";
 import blogPostPreview from "@assets/project-previews/blog-post.webp";
 ---
 
@@ -14,8 +15,16 @@ import blogPostPreview from "@assets/project-previews/blog-post.webp";
       description="Post your thoughts, opinions, and experiences anonymously. Whether you're looking to vent about your day, share your political views, or connect with other people."
       image={stickyThoughtsPreview}
       techStack={["Next.js", "Prisma", "PostgreSQL"]}
-      liveLink="https://stickythoughts.alexanderho.dev/"
+      liveLink="https://stickythoughts.alexanderho.dev"
       sourceLink="https://github.com/alexndrho/sticky-thoughts"
+    />
+
+    <ProjectCard
+      title="LinkUp"
+      description="An anonymous random chat application that connects strangers worldwide through video chat, text-only messaging, or public chat."
+      image={linkUpPreview}
+      techStack={["Next.js", "Socket.IO", "PeerJS", "TailwindCSS"]}
+      sourceLink="https://github.com/alexndrho/linkup"
     />
 
     <ProjectCard
@@ -23,32 +32,16 @@ import blogPostPreview from "@assets/project-previews/blog-post.webp";
       description="Test your knowledge, the trivia app that challenges your mind."
       image={brainiacPreview}
       techStack={["Next.js", "Mantine", "API"]}
-      liveLink="https://brainiac.alexanderho.dev/"
+      liveLink="https://brainiac.alexanderho.dev"
       sourceLink="https://github.com/alexndrho/brainiac"
     />
-
-    <!-- <ProjectCard
-      title="LinkUp"
-      description="A modern platform for anonymous random chat. Connect with strangers instantly!"
-      image={linkUpPreview}
-      techStack={[
-        "Socket.IO",
-        "PeerJS",
-        "React",
-        "TailwindCSS",
-        "Node",
-        "Express",
-      ]}
-      liveLink="https://linkup.alexanderho.dev/"
-      sourceLink="https://github.com/alexndrho/linkup"
-    /> -->
 
     <ProjectCard
       title="Blog"
       description="A blog posting website allows users to create an account, write blogs in Markdown format, and add photos, videos, and other media. Users canalso update their personal information and upload a profile picture."
       image={blogPostPreview}
       techStack={["MongoDB", "Express", "React", "Node", "Stitches"]}
-      liveLink="https://blog-post-k6bm.onrender.com/"
+      liveLink="https://blog-post-k6bm.onrender.com"
       sourceLink="https://github.com/alexndrho/blog-post"
     />
   </div>
