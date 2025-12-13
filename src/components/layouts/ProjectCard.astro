@@ -15,10 +15,7 @@ const { title, description, image, techStack, liveLink, sourceLink } =
   Astro.props;
 
 // remove trailing slash from liveLink if it exists
-let cleanLiveLink = liveLink;
-if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
-  cleanLiveLink = cleanLiveLink.slice(0, -1);
-}
+const computedUrl = liveLink || "http://localhost:3000";
 ---
 
 <article class="card">
@@ -31,7 +28,7 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
       </div>
 
       <div aria-label="website url" class="card__url-txt">
-        {cleanLiveLink}
+        {computedUrl}
       </div>
     </div>
     <Image src={image} alt="project-preview" class="card__img" />
@@ -47,9 +44,9 @@ if (cleanLiveLink && cleanLiveLink.endsWith("/")) {
 
     <div class="card__links">
       {
-        cleanLiveLink && (
+        liveLink && (
           <a
-            href={cleanLiveLink}
+            href={liveLink}
             target="_blank"
             rel="noreferrer"
             class="btn btn--primary btn--dashed-effect"
