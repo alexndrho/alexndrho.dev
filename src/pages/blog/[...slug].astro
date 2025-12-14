@@ -2,6 +2,9 @@
 import BlogPostLayout from "@/layouts/BlogPostLayout.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalHref = canonicalURL.toString().replace(/\/$/, "");
+
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
@@ -19,5 +22,9 @@ const { Content, remarkPluginFrontmatter } = await post.render();
   {...post.data}
   minutesRead={remarkPluginFrontmatter.minutesRead}
 >
+  <Fragment slot="head">
+    <link rel="canonical" href={canonicalHref} />
+  </Fragment>
+
   <Content />
 </BlogPostLayout>

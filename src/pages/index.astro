@@ -7,6 +7,9 @@ import Home from "@components/sections/Home.astro";
 import About from "@components/sections/About.astro";
 import Projects from "@components/sections/Projects.astro";
 import Contact from "@/components/sections/Contact.astro";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalHref = canonicalURL.toString().replace(/\/$/, "");
 ---
 
 <Layout
@@ -14,7 +17,9 @@ import Contact from "@/components/sections/Contact.astro";
   description="Full Stack Web Developer crafting modern web experiences. Explore my portfolio, projects, and skills. Open to collaboration and new opportunities."
   navBarFloat
 >
-  <ToastContainer client:idle />
+  <Fragment slot="head">
+    <link rel="canonical" href={canonicalHref} />
+  </Fragment>
 
   <main>
     <Home />
@@ -22,4 +27,6 @@ import Contact from "@/components/sections/Contact.astro";
     <Projects />
     <Contact />
   </main>
+
+  <ToastContainer client:idle />
 </Layout>
