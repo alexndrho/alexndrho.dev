@@ -18,6 +18,8 @@ const { title, description, pubDate, updatedDate, heroImage, minutesRead } =
 ---
 
 <BaseLayout title={title} description={description}>
+  <slot name="head" slot="head" />
+
   <ProgressBar />
   <NavBar />
 
