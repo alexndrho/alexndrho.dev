@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+import Layout from "@/layouts/Layout.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalHref = canonicalURL.toString().replace(/\/$/, "");
+
+const gallery = (await getCollection("gallery")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout
+  title="Alexander Gabriel Ho | Full Stack Web Developer"
+  description="Explore the collection of digital art, illustrations, and creative projects by Alexander Gabriel Ho."
+>
+  <Fragment slot="head">
+    <link rel="canonical" href={canonicalHref} />
+  </Fragment>
+
+  <div class="container">
+    <h1>Gallery</h1>
+
+    <p>
+      Welcome to my gallery! a collection of digital artworks, illustrations,
+      and creative projects I&apos;ve created. Feel free to explore what&apos;s
+      here.
+    </p>
+
+    <div class="gallery">
+      {
+        gallery.map((item) => (
+          <a href={`/gallery/${item.slug}`} class="image">
+            <Image
+              src={item.data.image}
+              alt="hero"
+              loading="lazy"
+              class="image__hero"
+              transition:name={item.data.title}
+            />
+            <h2 class="image__title">{item.data.title}</h2>
+            <FormattedDate date={item.data.pubDate} />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <style>
+    html {
+      scroll-behavior: auto;
+    }
+
+    .container {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .image:hover {
+      color: var(--color-primary);
+    }
+
+    .image {
+      color: var(--color-dark);
+      text-decoration: none;
+      transition: color 0.1s ease-in-out;
+    }
+
+    .image:hover .image__hero {
+      box-shadow: var(--content-box-shadow);
+    }
+
+    .image__title {
+      margin: 0;
+      font-size: var(--font-size-heading-4);
+    }
+
+    @media (--sm-viewport) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (--lg-viewport) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</Layout>

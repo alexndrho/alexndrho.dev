@@ -59,7 +59,7 @@
 
   /* box shadow */
   --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  --blog-box-shadow: 0 2px 6px var(--color-light-darkest),
+  --content-box-shadow: 0 2px 6px var(--color-light-darkest),
     0 8px 24px var(--color-light-darkest),
     0 16px 32px var(--color-light-darkest);
 }
