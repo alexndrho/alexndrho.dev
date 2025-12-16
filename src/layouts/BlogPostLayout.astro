@@ -4,8 +4,6 @@ import { Image } from "astro:assets";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ProgressBar from "@components/ProgressBar.astro";
-import NavBar from "@components/Navbar.astro";
-import Footer from "@components/Footer.astro";
 import ScrollToTop from "@components/ScrollToTop.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 
@@ -21,7 +19,6 @@ const { title, description, pubDate, updatedDate, heroImage, minutesRead } =
   <slot name="head" slot="head" />
 
   <ProgressBar />
-  <NavBar />
 
   <main>
     <article>
@@ -63,7 +60,6 @@ const { title, description, pubDate, updatedDate, heroImage, minutesRead } =
   </main>
 
   <ScrollToTop />
-  <Footer />
 
   <style>
     main {
