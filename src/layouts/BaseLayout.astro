@@ -13,6 +13,14 @@ import "@styles/common/link.css";
 import "@styles/common/section.css";
 import "@styles/common/text.css";
 
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+
+import poppins600Woff2 from "@fontsource/poppins/files/poppins-latin-600-normal.woff2?url";
+import poppins700Woff2 from "@fontsource/poppins/files/poppins-latin-700-normal.woff2?url";
+
 export interface Props {
   title: string;
   description: string;
@@ -25,6 +33,21 @@ const { title, description, navBarFloat } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead title={title} description={description}>
+      <link
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        href={poppins600Woff2}
+        crossorigin="anonymous"
+      />
+      <link
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        href={poppins700Woff2}
+        crossorigin="anonymous"
+      />
+
       <slot name="head" slot="head" />
     </BaseHead>
   </head>
