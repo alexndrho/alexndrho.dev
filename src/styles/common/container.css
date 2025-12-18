@@ -1,23 +1,24 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding: 0 var(--size-padding) 0 var(--size-padding);
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
 
-  max-width: calc(var(--size-max-width-md) + (var(--size-padding) * 2));
+  width: 100%;
+  max-width: calc(var(--size-max-width-md) + (var(--spacing-md) * 2));
 }
 
 .container--nav {
-  margin: 0 auto;
-  width: 100%;
-  padding: 0.75rem var(--size-padding);
-  /* max-width: calc(var(--size-max-width-lg) + (var(--size-padding) * 2)); */
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
 }
 
 .container--section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
 }
 
 .container--footer {
-  padding: 0.75rem var(--size-padding);
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
 }

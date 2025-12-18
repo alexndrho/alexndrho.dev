@@ -6,7 +6,7 @@
 
 .contact__input,
 .contact__textarea {
-  margin-top: 1em;
+  margin-top: var(--spacing-md);
   width: 100%;
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);
@@ -17,7 +17,7 @@
 }
 
 .contact__submit {
-  margin-top: 1em;
+  margin-top: var(--spacing-lg);
 }
 
 /* media queries */

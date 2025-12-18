@@ -25,37 +25,44 @@
   --font-size-8xl: 6rem;
   --font-size-9xl: 8rem;
 
-  --font-size-heading-1: 3.052rem;
-  --font-size-heading-2: 2.441rem;
-  --font-size-heading-3: 1.953rem;
-  --font-size-heading-4: 1.563rem;
-  --font-size-heading-5: 1.25rem;
-  --font-size-heading-6: 1rem;
+  --font-size-heading-1: 2.125rem;
+  --font-size-heading-2: 1.625rem;
+  --font-size-heading-3: 1.375rem;
+  --font-size-heading-4: 1.125rem;
+  --font-size-heading-5: 1rem;
+  --font-size-heading-6: 0.875rem;
 
   /* for line height */
-  --line-height-xs: 1rem;
-  --line-height-sm: 1.25rem;
-  --line-height-md: 1.7rem; /* Updated value */
-  --line-height-lg: 1.75rem;
-  --line-height-xl: 1.75rem;
-  --line-height-2xl: 2rem;
-  --line-height-3xl: 2.25rem;
-  --line-height-4xl: 2.5rem;
-  --line-height-5xl: 1;
-  --line-height-6xl: 1;
-  --line-height-7xl: 1;
-  --line-height-8xl: 1;
-  --line-height-9xl: 1;
+  --line-height-xs: 1.4;
+  --line-height-sm: 1.45;
+  --line-height-md: 1.55;
+  --line-height-lg: 1.6;
+  --line-height-xl: 1.65;
+  --line-height-2xl: 1.75;
+  --line-height-3xl: 1.875;
+  --line-height-4xl: 1.95;
+  --line-height-5xl: 2;
+  --line-height-6xl: 2.1;
+  --line-height-7xl: 2.2;
+  --line-height-8xl: 2.3;
+  --line-height-9xl: 2.4;
 
   /* for container spacing */
   --size-max-width-lg: 1366px;
   --size-max-width-md: 1140px;
-  --size-padding: 1.5rem;
+
+  --spacing-xs: 0.625rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.25rem;
+  --spacing-xl: 2rem;
 
   /* for border radius */
-  --border-radius-md: 0.75rem;
-  --border-radius-sm: 0.5rem;
-  --border-radius-xs: 0.25rem;
+  --border-radius-xs: 0.125rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 2rem;
 
   /* box shadow */
   --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -109,32 +116,38 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0.5rem 0;
-  line-height: 1.2;
+  margin-top: 0;
+  font-weight: 700;
 }
 
 h1 {
   font-size: var(--font-size-heading-1);
+  line-height: 1.3;
 }
 
 h2 {
   font-size: var(--font-size-heading-2);
+  line-height: 1.35;
 }
 
 h3 {
   font-size: var(--font-size-heading-3);
+  line-height: 1.4;
 }
 
 h4 {
   font-size: var(--font-size-heading-4);
+  line-height: 1.45;
 }
 
 h5 {
   font-size: var(--font-size-heading-5);
+  line-height: 1.5;
 }
 
 h6 {
   font-size: var(--font-size-heading-6);
+  line-height: 1.5;
 }
 
 strong,
@@ -151,10 +164,12 @@ a:hover {
 }
 
 p {
+  margin-top: 0;
   margin-bottom: 1em;
 }
 
 .prose p {
+  margin-top: 0;
   margin-bottom: 2em;
 }
 

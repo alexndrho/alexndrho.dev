@@ -116,7 +116,7 @@ const { float } = Astro.props;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4em;
+    gap: var(--spacing-xl);
 
     transition: transform 0.2s ease-out;
   }
@@ -161,7 +161,7 @@ const { float } = Astro.props;
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
-      gap: 2em;
+      gap: var(--spacing-lg);
     }
 
     .nav__link {

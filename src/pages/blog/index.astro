@@ -23,7 +23,7 @@ const blogs = (await getCollection("blog")).sort(
   </Fragment>
 
   <div class="container">
-    <h1 class="title">Blog</h1>
+    <h1>Blog</h1>
 
     <div class="blog-hero">
       <div class="blog-hero__item">
@@ -61,30 +61,32 @@ const blogs = (await getCollection("blog")).sort(
 
   <style>
     .container {
-      padding-top: 2.5em;
-      padding-bottom: 2.5em;
-    }
-
-    .title {
-      margin-bottom: 0.5em;
+      padding-top: var(--spacing-xl);
+      padding-bottom: var(--spacing-xl);
     }
 
     .blog-hero {
+      margin-bottom: var(--spacing-xs);
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
+    .blog-hero p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
     .blog-hero__item {
       display: flex;
       align-items: center;
-      gap: 0.5em;
+      gap: var(--spacing-md);
     }
 
     .blogs {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2.5rem;
+      gap: var(--spacing-md);
     }
 
     .blog {
@@ -98,7 +100,6 @@ const blogs = (await getCollection("blog")).sort(
     }
 
     .blog__hero {
-      margin-bottom: 0.25rem;
       aspect-ratio: 2 / 1;
       object-fit: cover;
       transition: box-shadow 0.1s ease-in-out;
@@ -109,8 +110,8 @@ const blogs = (await getCollection("blog")).sort(
     }
 
     .blog__title {
+      margin-bottom: 0;
       font-size: var(--font-size-2xl);
-      margin-bottom: 0.0625em;
     }
 
     @media (--lg-viewport) {
