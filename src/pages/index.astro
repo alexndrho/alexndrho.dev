@@ -15,12 +15,9 @@ const canonicalHref = canonicalURL.toString().replace(/\/$/, "");
 <Layout
   title="Alexander Gabriel Ho | Full Stack Web Developer"
   description="Full Stack Web Developer crafting modern web experiences. Explore my portfolio, projects, and skills. Open to collaboration and new opportunities."
+  canonicalURL={canonicalHref}
   navBarFloat
 >
-  <Fragment slot="head">
-    <link rel="canonical" href={canonicalHref} />
-  </Fragment>
-
   <main>
     <Home />
     <About />

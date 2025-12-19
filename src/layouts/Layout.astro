@@ -4,17 +4,23 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 export interface Props {
   title: string;
   description: string;
+  canonicalURL?: string | undefined;
+  image?: ImageMetadata | undefined;
 
   navBarFloat?: boolean | undefined;
 }
 
-const { title, description, navBarFloat } = Astro.props;
+const { title, description, canonicalURL, image, navBarFloat } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} navBarFloat={navBarFloat}>
-  <Fragment slot="head">
-    <slot name="head" />
-  </Fragment>
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  image={image}
+  navBarFloat={navBarFloat}
+>
+  <slot name="head" slot="head" />
 
   <slot />
 </BaseLayout>

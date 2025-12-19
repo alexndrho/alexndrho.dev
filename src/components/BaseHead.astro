@@ -1,20 +1,80 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import type { ImageMetadata } from "astro";
 
-export interface Props {
+import poppins600Woff2 from "@fontsource/poppins/files/poppins-latin-600-normal.woff2?url";
+import poppins700Woff2 from "@fontsource/poppins/files/poppins-latin-700-normal.woff2?url";
+
+import FallbackImage from "@/assets/me.png";
+
+import "normalize.css";
+import "@styles/global.css";
+import "@styles/common/btn.css";
+import "@styles/common/container.css";
+import "@styles/common/input.css";
+import "@styles/common/link.css";
+import "@styles/common/section.css";
+import "@styles/common/text.css";
+
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+
+interface Props {
   title: string;
   description: string;
+  canonicalURL?: string | undefined;
+  image?: ImageMetadata | undefined;
 }
 
-const { title, description } = Astro.props;
+const { title, description, canonicalURL, image = FallbackImage } = Astro.props;
 ---
 
+<!-- Global Metadata -->
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<meta name="viewport" content="width=device-width" />
-<meta name="description" content={description} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="generator" content={Astro.generator} />
-<slot name="head" />
+
+<!-- Font preloads -->
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={poppins600Woff2}
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={poppins700Woff2}
+  crossorigin="anonymous"
+/>
+
+<!-- Canonical URL -->
+{canonicalURL && <link rel="canonical" href={canonicalURL} />}
+
+<!-- Primary Meta Tags -->
 <title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL || Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image.src, Astro.url)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL || Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<slot name="head" />
 <ClientRouter />

@@ -24,11 +24,9 @@ const post = Astro.props;
 <Layout
   title={`${post.data.title} | Alexander Gabriel Ho`}
   description={`A detailed view of the artwork titled ${post.data.title} by Alexander Gabriel Ho.`}
+  canonicalURL={canonicalHref}
+  image={post.data.image}
 >
-  <Fragment slot="head">
-    <link rel="canonical" href={canonicalHref} />
-  </Fragment>
-
   <div class="container">
     <a href="/gallery" class="link link--icon close-link" aria-label="Close">
       <TbArrowLeft /> Back to Gallery

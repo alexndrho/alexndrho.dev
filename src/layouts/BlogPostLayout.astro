@@ -9,13 +9,27 @@ import FormattedDate from "@components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
   minutesRead: string;
+
+  canonicalURL?: string | undefined;
 };
 
-const { title, description, pubDate, updatedDate, heroImage, minutesRead } =
-  Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  minutesRead,
+  canonicalURL,
+} = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  image={heroImage}
+>
   <slot name="head" slot="head" />
 
   <ProgressBar />

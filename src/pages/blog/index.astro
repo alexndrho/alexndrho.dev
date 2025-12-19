@@ -17,10 +17,16 @@ const blogs = (await getCollection("blog")).sort(
 <Layout
   title="Blog - Alexander Gabriel Ho"
   description="Explore web development tips, coding tutorials, and personal insights from Alexander Gabriel Ho. Discover new articles on programming, technology trends, and the journey of a modern developer."
+  canonicalURL={canonicalHref}
 >
-  <Fragment slot="head">
-    <link rel="canonical" href={canonicalHref} />
-  </Fragment>
+  <slot name="head">
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed"
+      href={new URL("blog/rss.xml", Astro.site)}
+    />
+  </slot>
 
   <div class="container">
     <h1>Blog</h1>

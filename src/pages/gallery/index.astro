@@ -16,11 +16,8 @@ const gallery = (await getCollection("gallery")).sort(
 <Layout
   title="Alexander Gabriel Ho | Full Stack Web Developer"
   description="Explore the collection of digital art, illustrations, and creative projects by Alexander Gabriel Ho."
+  canonicalURL={canonicalHref}
 >
-  <Fragment slot="head">
-    <link rel="canonical" href={canonicalHref} />
-  </Fragment>
-
   <div class="container">
     <h1>Gallery</h1>
 
