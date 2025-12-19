@@ -65,6 +65,7 @@ const { title, description, canonicalURL, image = FallbackImage } = Astro.props;
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonicalURL || Astro.url} />
+<meta property="og:site_name" content="Alexander Gabriel Ho" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image.src, Astro.url)} />
