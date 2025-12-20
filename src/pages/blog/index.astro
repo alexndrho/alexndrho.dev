@@ -28,7 +28,7 @@ const blogs = (await getCollection("blog")).sort(
     />
   </slot>
 
-  <div class="container">
+  <main class="container">
     <h1>Blog</h1>
 
     <div class="blog-hero">
@@ -63,7 +63,7 @@ const blogs = (await getCollection("blog")).sort(
         ))
       }
     </div>
-  </div>
+  </main>
 
   <style>
     .container {
