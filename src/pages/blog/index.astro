@@ -10,7 +10,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const canonicalHref = canonicalURL.toString().replace(/\/$/, "");
 
 const blogs = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
