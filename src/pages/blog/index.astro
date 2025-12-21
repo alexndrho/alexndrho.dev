@@ -1,10 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { TbFileFilled, TbRss } from "react-icons/tb";
 
 import Layout from "@layouts/Layout.astro";
-import FormattedDate from "@components/FormattedDate.astro";
+import BlogPreview from "@/components/BlogPreview.astro";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const canonicalHref = canonicalURL.toString().replace(/\/$/, "");
@@ -46,23 +45,7 @@ const blogs = (await getCollection("blog")).sort(
       >
     </div>
 
-    <div class="blogs">
-      {
-        blogs.map((blog) => (
-          <a href={`/blog/${blog.slug}`} class="blog">
-            <Image
-              src={blog.data.heroImage}
-              alt="hero"
-              loading="lazy"
-              class="blog__hero"
-              transition:name={blog.data.title}
-            />
-            <h2 class="blog__title">{blog.data.title}</h2>
-            <FormattedDate date={blog.data.pubDate} />
-          </a>
-        ))
-      }
-    </div>
+    <BlogPreview blogs={blogs} />
   </main>
 
   <style>
@@ -87,43 +70,6 @@ const blogs = (await getCollection("blog")).sort(
       display: flex;
       align-items: center;
       gap: var(--spacing-md);
-    }
-
-    .blogs {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--spacing-md);
-    }
-
-    .blog {
-      color: var(--color-dark);
-      text-decoration: none;
-      transition: color 0.1s ease-in-out;
-    }
-
-    .blog:hover {
-      color: var(--color-primary);
-    }
-
-    .blog__hero {
-      aspect-ratio: 2 / 1;
-      object-fit: cover;
-      transition: box-shadow 0.1s ease-in-out;
-    }
-
-    .blog:hover .blog__hero {
-      box-shadow: var(--content-box-shadow);
-    }
-
-    .blog__title {
-      margin-bottom: 0;
-      font-size: var(--font-size-2xl);
-    }
-
-    @media (--lg-viewport) {
-      .blogs {
-        grid-template-columns: repeat(2, 1fr);
-      }
     }
   </style>
 </Layout>

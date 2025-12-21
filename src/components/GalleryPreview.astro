@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+  gallery: CollectionEntry<"gallery">[];
+}
+
+const { gallery } = Astro.props;
+---
+
+<div class="gallery">
+  {
+    gallery.map((item) => (
+      <a href={`/gallery/${item.slug}`} class="image">
+        <Image
+          src={item.data.image}
+          alt="hero"
+          loading="lazy"
+          class="image__hero"
+          transition:name={item.data.title}
+        />
+        <p class="image__title">{item.data.title}</p>
+        <FormattedDate date={item.data.pubDate} />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .image:hover {
+    color: var(--color-primary);
+  }
+
+  .image {
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: color 0.1s ease-in-out;
+  }
+
+  .image:hover .image__hero {
+    box-shadow: var(--content-box-shadow);
+  }
+
+  .image__title {
+    margin: 0;
+    font-size: var(--font-size-heading-4);
+    line-height: var(--line-height-sm);
+    font-weight: 700;
+  }
+
+  @media (--sm-viewport) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (--lg-viewport) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

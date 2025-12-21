@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import BlogPreview from "../BlogPreview.astro";
+
+const blogs = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 2);
+---
+
+<section id="blog" class="section">
+  <div class="container container--section">
+    <div class="banner">
+      <h2 class="banner__title">Latest blog posts</h2>
+      <a href="/blog" class="link">View all posts</a>
+    </div>
+
+    <BlogPreview blogs={blogs} />
+  </div>
+</section>
+
+<style>
+  .banner {
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+
+  .banner__title {
+    margin: 0;
+  }
+</style>

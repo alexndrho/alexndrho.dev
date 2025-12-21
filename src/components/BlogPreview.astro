@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+  blogs: CollectionEntry<"blog">[];
+}
+
+const { blogs } = Astro.props;
+---
+
+<div class="blogs">
+  {
+    blogs.map((blog) => (
+      <a href={`/blog/${blog.slug}`} class="blog">
+        <Image
+          src={blog.data.heroImage}
+          alt="hero"
+          loading="lazy"
+          class="blog__hero"
+          transition:name={blog.data.title}
+        />
+        <p class="blog__title">{blog.data.title}</p>
+        <FormattedDate date={blog.data.pubDate} />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .blogs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .blog {
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: color 0.1s ease-in-out;
+  }
+
+  .blog:hover {
+    color: var(--color-primary);
+  }
+
+  .blog__hero {
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    transition: box-shadow 0.1s ease-in-out;
+  }
+
+  .blog:hover .blog__hero {
+    box-shadow: var(--content-box-shadow);
+  }
+
+  .blog__title {
+    margin-bottom: 0;
+    font-size: var(--font-size-heading-4);
+    line-height: var(--line-height-sm);
+    font-weight: 700;
+  }
+
+  @media (--lg-viewport) {
+    .blogs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
