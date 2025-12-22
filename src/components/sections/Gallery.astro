@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import { TbArrowRight } from "react-icons/tb";
+
 import GalleryPreview from "../GalleryPreview.astro";
 
 const gallery = (await getCollection("gallery"))
@@ -11,7 +13,10 @@ const gallery = (await getCollection("gallery"))
   <div class="container container--section">
     <div class="banner">
       <h2 class="banner__title">Latest gallery posts</h2>
-      <a href="/gallery" class="link">View all posts</a>
+      <a href="/gallery" class="link link--no-underline banner__link"
+        >View all posts
+        <TbArrowRight size="1em" />
+      </a>
     </div>
 
     <GalleryPreview gallery={gallery} />
@@ -30,5 +35,11 @@ const gallery = (await getCollection("gallery"))
 
   .banner__title {
     margin: 0;
+  }
+
+  .banner__link {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
   }
 </style>

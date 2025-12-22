@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import { TbArrowRight } from "react-icons/tb";
+
 import BlogPreview from "../BlogPreview.astro";
 
 const blogs = (await getCollection("blog"))
@@ -11,7 +13,10 @@ const blogs = (await getCollection("blog"))
   <div class="container container--section">
     <div class="banner">
       <h2 class="banner__title">Latest blog posts</h2>
-      <a href="/blog" class="link">View all posts</a>
+      <a href="/blog" class="link link--no-underline banner__link"
+        >View all posts
+        <TbArrowRight size="1em" />
+      </a>
     </div>
 
     <BlogPreview blogs={blogs} />
@@ -30,5 +35,11 @@ const blogs = (await getCollection("blog"))
 
   .banner__title {
     margin: 0;
+  }
+
+  .banner__link {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
   }
 </style>
