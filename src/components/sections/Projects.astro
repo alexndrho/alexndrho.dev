@@ -4,6 +4,23 @@ import stickyThoughtsPreview from "@assets/project-previews/sticky-thoughts.png"
 import linkUpPreview from "@assets/project-previews/linkup.jpeg";
 import brainiacPreview from "@assets/project-previews/brainiac.webp";
 import blogPostPreview from "@assets/project-previews/blog-post.webp";
+
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import {
+  TbBrandMantine,
+  TbBrandMongodb,
+  TbBrandNextjs,
+  TbSettings,
+} from "react-icons/tb";
+import {
+  SiExpress,
+  SiPrisma,
+  SiSocketdotio,
+  SiTailwindcss,
+} from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { MdCable } from "react-icons/md";
+import { RxStitchesLogo } from "react-icons/rx";
 ---
 
 <section id="projects" class="section">
@@ -14,7 +31,11 @@ import blogPostPreview from "@assets/project-previews/blog-post.webp";
       title="StickyThoughts"
       description="Post your thoughts, opinions, and experiences anonymously. Whether you're looking to vent about your day, share your political views, or connect with other people."
       image={stickyThoughtsPreview}
-      techStack={["Next.js", "Prisma", "PostgreSQL"]}
+      techStack={[
+        { icon: TbBrandNextjs, tech: "Next.js" },
+        { icon: SiPrisma, tech: "Prisma" },
+        { icon: BiLogoPostgresql, tech: "PostgreSQL" },
+      ]}
       liveLink="https://stickythoughts.alexanderho.dev"
       sourceLink="https://github.com/alexndrho/sticky-thoughts"
     />
@@ -23,7 +44,12 @@ import blogPostPreview from "@assets/project-previews/blog-post.webp";
       title="LinkUp"
       description="An anonymous random chat application that connects strangers worldwide through video chat, text-only messaging, or public chat."
       image={linkUpPreview}
-      techStack={["Next.js", "Socket.IO", "PeerJS", "TailwindCSS"]}
+      techStack={[
+        { icon: TbBrandNextjs, tech: "Next.js" },
+        { icon: SiSocketdotio, tech: "Socket.IO" },
+        { icon: MdCable, tech: "PeerJS" },
+        { icon: SiTailwindcss, tech: "TailwindCSS" },
+      ]}
       liveLink="https://thelinkup.up.railway.app"
       sourceLink="https://github.com/alexndrho/linkup"
     />
@@ -32,7 +58,11 @@ import blogPostPreview from "@assets/project-previews/blog-post.webp";
       title="Brainiac"
       description="Test your knowledge, the trivia app that challenges your mind."
       image={brainiacPreview}
-      techStack={["Next.js", "Mantine", "API"]}
+      techStack={[
+        { icon: TbBrandNextjs, tech: "Next.js" },
+        { icon: TbBrandMantine, tech: "Mantine" },
+        { icon: TbSettings, tech: "API" },
+      ]}
       liveLink="https://brainiac.alexanderho.dev"
       sourceLink="https://github.com/alexndrho/brainiac"
     />
@@ -41,7 +71,13 @@ import blogPostPreview from "@assets/project-previews/blog-post.webp";
       title="Blog"
       description="A blog posting website allows users to create an account, write blogs in Markdown format, and add photos, videos, and other media. Users canalso update their personal information and upload a profile picture."
       image={blogPostPreview}
-      techStack={["MongoDB", "Express", "React", "Node", "Stitches"]}
+      techStack={[
+        { icon: TbBrandMongodb, tech: "MongoDB" },
+        { icon: SiExpress, tech: "Express" },
+        { icon: FaReact, tech: "React" },
+        { icon: FaNodeJs, tech: "Node" },
+        { icon: RxStitchesLogo, tech: "Stitches" },
+      ]}
       liveLink="https://blog-post-k6bm.onrender.com"
       sourceLink="https://github.com/alexndrho/blog-post"
     />
