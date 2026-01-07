@@ -5,7 +5,3 @@
 .section:nth-child(even) {
   background-color: var(--color-light);
 }
-
-.section h2 {
-  color: var(--color-primary);
-}
