@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import type { IconType } from "react-icons";
+import { FaLock } from "react-icons/fa";
 import { TbBrandGithub, TbExternalLink } from "react-icons/tb";
 
 interface Props {
@@ -18,8 +19,11 @@ interface Props {
 const { title, description, image, techStack, liveLink, sourceLink } =
   Astro.props;
 
-// remove trailing slash from liveLink if it exists
-const computedUrl = liveLink || "http://localhost:3000";
+// remove protocol (https://, http://) from liveLink for display
+const computedUrl = (liveLink || "http://localhost:3000").replace(
+  /^https?:\/\//,
+  ""
+);
 ---
 
 <article class="card">
@@ -32,6 +36,7 @@ const computedUrl = liveLink || "http://localhost:3000";
       </div>
 
       <div aria-label="website url" class="card__url-txt">
+        <FaLock />
         {computedUrl}
       </div>
     </div>
@@ -163,9 +168,13 @@ const computedUrl = liveLink || "http://localhost:3000";
     margin: 0 auto 0;
     padding: 0.25em 0.5em;
 
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius-sm);
     border: 1px solid var(--color-light-darkest);
     background-color: var(--color-light-darker);
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
   }
 
   .card__img {
